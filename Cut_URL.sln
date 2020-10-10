@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cut_URL", "Cut_URL\Cut_URL.csproj", "{6C2A3829-2DEE-47A9-9DFA-F24B52EE77D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cut_URL.Tests", "cut_URL.Tests\cut_URL.Tests.csproj", "{BE24AE10-93C9-4D37-84C1-307F38CB4E70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6C2A3829-2DEE-47A9-9DFA-F24B52EE77D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C2A3829-2DEE-47A9-9DFA-F24B52EE77D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C2A3829-2DEE-47A9-9DFA-F24B52EE77D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
