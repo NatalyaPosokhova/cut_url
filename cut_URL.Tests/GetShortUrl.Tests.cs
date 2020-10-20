@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Cut_URL.Models;
+using System;
 
 namespace cut_URL.Tests
 {
@@ -13,13 +14,17 @@ namespace cut_URL.Tests
         }
 
         [Test]
-        public void TryGetShortUrlShouldBeSuccessTest()
+        public void TryGetShortUrlLengthShouldBeSuccessTest()
         {
             //Arrange
-            var expected = "https://cuturl.com/yxkbab";
+            var expected = 6;
+            var longUrl = "https://docs.google.com/document/d/1tH70Xqis12ad0o-ySawhDjMozNrqTpfhl_D30aJ0RjQ/edit";
+
 
             //Actual
-            var actual = converter.GetShortUrl("https://docs.google.com/document/d/1tH70Xqis12ad0o-ySawhDjMozNrqTpfhl_D30aJ0RjQ/edit");
+            var shortUrl = converter.GetShortUrl(longUrl);
+            var index = shortUrl.IndexOf("/");
+            var actual = shortUrl.Substring(index + 1).Length;
 
             //Assert
             Assert.AreEqual(expected, actual);
