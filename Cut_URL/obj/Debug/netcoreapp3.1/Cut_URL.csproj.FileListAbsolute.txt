@@ -17,4 +17,3 @@ C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL\obj\Debug\netcoreapp3.1\staticw
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL\obj\Debug\netcoreapp3.1\Cut_URL.dll
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL\obj\Debug\netcoreapp3.1\Cut_URL.pdb
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL\obj\Debug\netcoreapp3.1\Cut_URL.genruntimeconfig.cache
-C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL\obj\Debug\netcoreapp3.1\Cut_URL.csprojAssemblyReference.cache

@@ -32,5 +32,13 @@ namespace cut_URL.Tests
             //Assert
             Assert.Throws<ConvertUrlException>(() => converter.GetShortUrl(""));
         }
+        [Test]
+        public void NullUrlTryGetShortUrlShouldBeErrorTest()
+        {
+            //Arrange
+            //Actual
+            //Assert
+            Assert.Throws<ConvertUrlException>(() => converter.GetShortUrl(null));
+        }
     }
 }
