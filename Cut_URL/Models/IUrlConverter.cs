@@ -7,6 +7,6 @@ namespace Cut_URL.Models
 {
     interface IUrlConverter
     {
-        public Url GetShortUrl(string longUrl);
+        public string GetShortUrl(string longUrl);
     }
 }

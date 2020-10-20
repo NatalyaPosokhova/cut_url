@@ -16,7 +16,7 @@ namespace cut_URL.Tests
         public void TryGetShortUrlShouldBeSuccessTest()
         {
             //Arrange
-            var expected = "https://cuturl.com/yxkbabvl";
+            var expected = "https://cuturl.com/yxkbab";
 
             //Actual
             var actual = converter.GetShortUrl("https://docs.google.com/document/d/1tH70Xqis12ad0o-ySawhDjMozNrqTpfhl_D30aJ0RjQ/edit");
