@@ -24,5 +24,13 @@ namespace cut_URL.Tests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void EmptyUrlTryGetShortUrlShouldBeErrorTest()
+        {
+            //Arrange
+            //Actual
+            //Assert
+            Assert.Throws<ConvertUrlException>(() => converter.GetShortUrl(""));
+        }
     }
 }
