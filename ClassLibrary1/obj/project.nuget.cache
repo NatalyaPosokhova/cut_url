@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jbW3MOXw/m33rWExeoXe1oETi1DEQ1qomfOT9dxjWIqlX1Dil4358suUeWK/I1btq+j8diP6KtyW/5fmK83wrA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NPosokhova\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\NPosokhova\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
