@@ -1090,16 +1090,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
-      },
-      "Cut_URL/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/Cut_URL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cut_URL.dll": {}
-        }
       }
     }
   },
@@ -4568,16 +4558,10 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "Cut_URL/1.0.0": {
-      "type": "project",
-      "path": "../Cut_URL/Cut_URL.csproj",
-      "msbuildProject": "../Cut_URL/Cut_URL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Cut_URL >= 1.0.0",
       "Dapper >= 2.0.35",
       "MySql.Data >= 8.0.22",
       "NETStandard.Library >= 2.0.3"
@@ -4608,11 +4592,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -4652,16 +4632,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Cut_URL is not compatible with netstandard2.0 (.NETStandard,Version=v2.0). Project Cut_URL supports: netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "Cut_URL",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

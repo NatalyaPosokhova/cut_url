@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "mLhGem/phekTPMnL6ouykIGH47Ov4/cEXevD20cI2eXJrkLc3RRbyl1XNzmbtbL3C2DGvIeAdkcIlLncRBz/Gw==",
-  "success": false,
+  "dgSpecHash": "fyCnS0APXYL6N8aHZH641VepPvIvD3G86D4owU2QyWLEjWLNrmfYAjz5j2dRpYjzGCdtBmIKShcOvljfOpvxcw==",
+  "success": true,
   "projectFilePath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\DataLibrary\\DataLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NPosokhova\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
@@ -76,15 +76,5 @@
     "C:\\Users\\NPosokhova\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
     "C:\\Users\\NPosokhova\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Cut_URL is not compatible with netstandard2.0 (.NETStandard,Version=v2.0). Project Cut_URL supports: netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "Cut_URL",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -7,6 +7,11 @@ namespace Cut_URL.Models
 {
     public class UrlConverter : IUrlConverter
     {
+        /// <summary>
+        /// Transforms Long Url to Short URL
+        /// </summary>
+        /// <param name="longUrl"></param>
+        /// <returns></returns>
         public string GetShortUrl(string longUrl)
         {
             Random rnd = new Random();
