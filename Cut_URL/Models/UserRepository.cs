@@ -20,16 +20,16 @@ namespace Cut_URL.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<Url>($"SELECT * FROM Url WHERE Url.userId = {userId}").ToList();
+                return db.Query<Url>("SELECT * FROM Url WHERE userId = @userId").ToList();
             }
         }
 
-        public void AddUrl(int userId)
+        public void AddUrl(Url Url)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "INSERT INTO Url (longUrl, shortUrl, transitionsQuantity, creationDate) VALUES(@longUrl, @shortUrl, @transitionsQuantity, @creationDate)";
-                db.Execute(sqlQuery, userId);
+                var sqlQuery = "INSERT INTO Url (userId, longUrl, shortUrl, transitionsQuantity = 0, creationDate = DateTime.Now) VALUES(@userId, @longUrl, @shortUrl, @transitionsQuantity, @creationDate)";
+                db.Execute(sqlQuery, Url);
 
                 // если мы хотим получить id добавленного пользователя
                 //var sqlQuery = "INSERT INTO Users (Name, Age) VALUES(@Name, @Age); SELECT CAST(SCOPE_IDENTITY() as int)";
@@ -38,16 +38,31 @@ namespace Cut_URL.Models
             }
         }
 
-        public void UpdateUrlTransitionsQuantity(int userId)
+        public void UpdateUrlTransitionsQuantity(Url Url)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                int _transitionsQuantity = Convert.ToInt32(db.Query<Url>("SELECT transitionsQuantity FROM Url WHERE userId = @userId")) + 1;
-                var sqlQuery = $"UPDATE Url SET {_transitionsQuantity} = @transitionsQuantity WHERE userId = @userId";
-                db.Execute(sqlQuery, userId);
+                int updatedTransitionsQuantity = Convert.ToInt32(db.Query<Url>("SELECT transitionsQuantity FROM Url WHERE userId = @userId")) + 1;
+                var sqlQuery = $"UPDATE Url SET transitionsQuantity = @updatedTransitionsQuantity WHERE userId = @userId";
+                db.Execute(sqlQuery, Url);
             }
         }
-
+        public void Create(User user)
+        {
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                var sqlQuery = "INSERT INTO Users (Id, Name) VALUES(@Id, @Name)";
+                db.Execute(sqlQuery, user);
+            }
+        }
+        public void Delete(int id)
+        {
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                var sqlQuery = "DELETE FROM Users WHERE Id = @id";
+                db.Execute(sqlQuery, new { id });
+            }
+        }
         //public List<User> GetUsers()
         //{
         //    using (IDbConnection db = new SqlConnection(connectionString))
@@ -64,13 +79,5 @@ namespace Cut_URL.Models
         //    }
         //}
 
-        //public void Delete(int id)
-        //{
-        //    using (IDbConnection db = new SqlConnection(connectionString))
-        //    {
-        //        var sqlQuery = "DELETE FROM Users WHERE Id = @id";
-        //        db.Execute(sqlQuery, new { id });
-        //    }
-        //}
     }
 }

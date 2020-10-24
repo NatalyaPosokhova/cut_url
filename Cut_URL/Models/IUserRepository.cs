@@ -8,8 +8,8 @@ namespace Cut_URL.Models
     interface IUserRepository
     {
         public List<Url> GetUrls(int userId);
-        public void AddUrl(int userId);
-        public void UpdateUrlTransitionsQuantity(int userId);
+        public void AddUrl(Url url);
+        public void UpdateUrlTransitionsQuantity(Url url);
 
     }
 }
