@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Cut_URL.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,9 @@ namespace Cut_URL
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            string connectionString = "Server=.\\SQLEXPRESS;Initial Catalog=cuturl;Integrated Security=True";
+            services.AddTransient<IUserRepository, UserRepository>(provider => new UserRepository(connectionString));
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

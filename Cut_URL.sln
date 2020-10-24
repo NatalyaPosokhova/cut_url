@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cut_URL", "Cut_URL\Cut_URL.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cut_URL.Tests", "cut_URL.Tests\cut_URL.Tests.csproj", "{BE24AE10-93C9-4D37-84C1-307F38CB4E70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{B6C8F101-311D-4DF4-99C7-B12F946CC1B6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE24AE10-93C9-4D37-84C1-307F38CB4E70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6C8F101-311D-4DF4-99C7-B12F946CC1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6C8F101-311D-4DF4-99C7-B12F946CC1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6C8F101-311D-4DF4-99C7-B12F946CC1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6C8F101-311D-4DF4-99C7-B12F946CC1B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

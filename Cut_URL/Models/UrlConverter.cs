@@ -11,7 +11,7 @@ namespace Cut_URL.Models
         /// Transforms Long Url to Short URL
         /// </summary>
         /// <param name="longUrl"></param>
-        /// <returns></returns>
+        /// <returns>short Url</returns>
         public string GetShortUrl(string longUrl)
         {
             Random rnd = new Random();
