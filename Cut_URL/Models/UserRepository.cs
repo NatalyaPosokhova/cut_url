@@ -55,12 +55,12 @@ namespace Cut_URL.Models
                 db.Execute(sqlQuery, user);
             }
         }
-        public void Delete(int id)
+        public void Delete(int userId)
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "DELETE FROM Users WHERE Id = @id";
-                db.Execute(sqlQuery, new { id });
+                var sqlQuery = "DELETE FROM Users WHERE Id = @userId";
+                db.Execute(sqlQuery, new { userId });
             }
         }
         //public List<User> GetUsers()
