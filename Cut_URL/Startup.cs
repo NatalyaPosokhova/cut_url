@@ -25,7 +25,7 @@ namespace Cut_URL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            //services.AddControllers();
             string connectionString = "Server=.\\SQLEXPRESS;Initial Catalog=cuturl;Integrated Security=True";
             services.AddTransient<IUserRepository, UserRepository>(provider => new UserRepository(connectionString));
             services.AddControllersWithViews();

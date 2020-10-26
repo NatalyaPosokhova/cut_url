@@ -7,23 +7,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cut_URL.Controllers
 {
-    public class CutUrlController : Controller
+    public class HomeController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-        
-        //IUserRepository _repository;
-        //public CutUrlController(IUserRepository repository)
-        //{
-        //    _repository = repository;
-        //}
+        private IUserRepository _repository;
+        public HomeController(IUserRepository repository)
+        {
+            _repository = repository;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
         //public ActionResult Index()
         //{
         //    return View(_repository.GetUsers());
         //}
-
         //public ActionResult Details(int id)
         //{
         //    User user = _repository.Get(id);
@@ -31,18 +29,12 @@ namespace Cut_URL.Controllers
         //        return View(user);
         //    return NotFound();
         //}
-
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public ActionResult Create(User user)
-        //{
-        //    _repository.Create(user);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost]
+        public ActionResult Create(User user)
+        {
+            _repository.Create(user);
+            return RedirectToAction("Index");
+        }
 
         //public ActionResult Edit(int id)
         //{
@@ -53,9 +45,9 @@ namespace Cut_URL.Controllers
         //}
 
         //[HttpPost]
-        //public ActionResult Edit(User user)
+        //public ActionResult Edit(Url url)
         //{
-        //    _repository.Update(user);
+        //    _repository.UpdateUrlTransitionsQuantity(url);
         //    return RedirectToAction("Index");
         //}
 

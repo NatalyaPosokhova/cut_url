@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xu9823RKVDN/6dFO3KsYez2rhWXTX2UUmJHMHSCun5yiiYUnLLQbkWo7M6vIl6VvskuqrkzUmrC2OKclVVMd2A==",
+  "dgSpecHash": "kP75bisNw8ADc4zvS45WMin9MtxSfwxLoyZbnOrGzx92qmlGaUNGj0LNIID3wdfzaBprDdwnYsSUWGFAqrbb1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
+  "projectFilePath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\cut_URL.Tests\\cut_URL.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NPosokhova\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\NPosokhova\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",

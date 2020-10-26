@@ -7408,11 +7408,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\cut_URL.Tests\\cut_URL.Tests.csproj",
       "projectName": "cut_URL.Tests",
-      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
+      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\cut_URL.Tests\\cut_URL.Tests.csproj",
       "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\obj\\",
+      "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\cut_URL.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7428,8 +7428,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj"
+            "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\Cut_URL.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\Cut_URL.csproj"
             }
           }
         }
