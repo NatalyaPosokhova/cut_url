@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cut_URL.Bootstrap\Cut_URL.Bootstrap.csproj" />
+    <ProjectReference Include="..\Cut_URL.Business_Logic.Interfaces\Cut_URL.Business_Logic.Interfaces.csproj" />
+  </ItemGroup>
+
 
 </Project>

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cut_URL.DataAccess.Interfaces\Cut_URL.DataAccess.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
