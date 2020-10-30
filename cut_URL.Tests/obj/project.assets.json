@@ -1226,18 +1226,25 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "Cut_URL/1.0.0": {
+      "Cut_URL.Business_Logic.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "compile": {
-          "bin/placeholder/Cut_URL.dll": {}
+          "bin/placeholder/Cut_URL.Business_Logic.Interfaces.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Cut_URL.dll": {}
+          "bin/placeholder/Cut_URL.Business_Logic.Interfaces.dll": {}
+        }
+      },
+      "Cut_URL.DataAccess.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Cut_URL.DataAccess.Interfaces.dll": {}
         },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        "runtime": {
+          "bin/placeholder/Cut_URL.DataAccess.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -4621,15 +4628,21 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "Cut_URL/1.0.0": {
+    "Cut_URL.Business_Logic.Interfaces/1.0.0": {
       "type": "project",
-      "path": "../Cut_URL/Cut_URL.csproj",
-      "msbuildProject": "../Cut_URL/Cut_URL.csproj"
+      "path": "../Cut_URL.Business_Logic.Interfaces/Cut_URL.Business_Logic.Interfaces.csproj",
+      "msbuildProject": "../Cut_URL.Business_Logic.Interfaces/Cut_URL.Business_Logic.Interfaces.csproj"
+    },
+    "Cut_URL.DataAccess.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Cut_URL.DataAccess.Interfaces/Cut_URL.DataAccess.Interfaces.csproj",
+      "msbuildProject": "../Cut_URL.DataAccess.Interfaces/Cut_URL.DataAccess.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Cut_URL >= 1.0.0",
+      "Cut_URL.Business_Logic.Interfaces >= 1.0.0",
+      "Cut_URL.DataAccess.Interfaces >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "NUnit3TestAdapter >= 3.15.1",
       "nunit >= 3.12.0"
@@ -4661,8 +4674,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj"
+            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj"
+            },
+            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
             }
           }
         }
@@ -4700,9 +4716,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

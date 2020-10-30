@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cut_URL\Cut_URL.csproj" />
+    <ProjectReference Include="..\Cut_URL.Business_Logic.Interfaces\Cut_URL.Business_Logic.Interfaces.csproj" />
+    <ProjectReference Include="..\Cut_URL.DataAccess.Interfaces\Cut_URL.DataAccess.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
