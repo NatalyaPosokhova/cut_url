@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cut_URL", "Cut_URL\Cut_URL.csproj", "{6C2A3829-2DEE-47A9-9DFA-F24B52EE77D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cut_URL.Tests", "cut_URL.Tests\cut_URL.Tests.csproj", "{BE24AE10-93C9-4D37-84C1-307F38CB4E70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cut_URL.Tests", "cut_URL.Tests\Cut_URL.Tests.csproj", "{BE24AE10-93C9-4D37-84C1-307F38CB4E70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cut_URL.Business_Logic.Interfaces", "Cut_URL.Business_Logic.Interfaces\Cut_URL.Business_Logic.Interfaces.csproj", "{2465394D-65F5-4C77-81A7-7D58B41A7979}"
 EndProject

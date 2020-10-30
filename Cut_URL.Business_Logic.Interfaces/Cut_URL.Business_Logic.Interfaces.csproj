@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Cut_URL.Business_Logic</RootNamespace>
   </PropertyGroup>
 
 </Project>

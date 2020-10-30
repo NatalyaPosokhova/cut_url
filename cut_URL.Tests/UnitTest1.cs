@@ -1,6 +1,9 @@
 using NUnit.Framework;
+using NSubstitute;
+using Cut_URL.DataAccess;
+using Cut_URL.Business_Logic;
 
-namespace cut_URL.Tests
+namespace Cut_URL.Tests
 {
     public class Tests
     {

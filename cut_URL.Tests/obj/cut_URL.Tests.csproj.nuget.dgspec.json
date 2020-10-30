@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj": {}
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj": {}
   },
   "projects": {
     "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
@@ -108,12 +108,12 @@
         }
       }
     },
-    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj": {
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
-        "projectName": "cut_URL.Tests",
-        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
+        "projectName": "Cut_URL.Tests",
+        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
         "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\obj\\",
         "projectStyle": "PackageReference",
@@ -152,6 +152,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.4.0, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[4.2.2, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
