@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\Cut_URL.csproj": {}
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\Cut_URL.csproj": {
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\Cut_URL.csproj",
+        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj",
         "projectName": "Cut_URL",
-        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\Cut_URL.csproj",
+        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\Cut_URL.csproj",
         "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL\\obj\\",
+        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
