@@ -1286,6 +1286,20 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Cut_URL.Business_Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Cut_URL.Business_Logic.Interfaces": "1.0.0",
+          "Cut_URL.DataAccess.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Cut_URL.Business_Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cut_URL.Business_Logic.dll": {}
+        }
+      },
       "Cut_URL.Business_Logic.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -4807,6 +4821,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Cut_URL.Business_Logic/1.0.0": {
+      "type": "project",
+      "path": "../Cut_URL.Business_Logic/Cut_URL.Business_Logic.csproj",
+      "msbuildProject": "../Cut_URL.Business_Logic/Cut_URL.Business_Logic.csproj"
+    },
     "Cut_URL.Business_Logic.Interfaces/1.0.0": {
       "type": "project",
       "path": "../Cut_URL.Business_Logic.Interfaces/Cut_URL.Business_Logic.Interfaces.csproj",
@@ -4820,6 +4839,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Cut_URL.Business_Logic >= 1.0.0",
       "Cut_URL.Business_Logic.Interfaces >= 1.0.0",
       "Cut_URL.DataAccess.Interfaces >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
@@ -4834,9 +4854,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
-      "projectName": "cut_URL.Tests",
-      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\cut_URL.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
+      "projectName": "Cut_URL.Tests",
+      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
       "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\obj\\",
       "projectStyle": "PackageReference",
@@ -4856,6 +4876,9 @@
           "projectReferences": {
             "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
               "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj"
+            },
+            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj"
             },
             "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
               "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"

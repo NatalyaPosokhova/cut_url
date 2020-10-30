@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cut_URL.Business_Logic
 {
-    public class CutUrlLogic
+    public class CutUrlLogic : ICutUrlLogic
     {
         private IRepository _repository;
         public CutUrlLogic(IRepository repository)

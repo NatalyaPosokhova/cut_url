@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cut_URL.Business_Logic.Interfaces\Cut_URL.Business_Logic.Interfaces.csproj" />
+    <ProjectReference Include="..\Cut_URL.Business_Logic\Cut_URL.Business_Logic.csproj" />
     <ProjectReference Include="..\Cut_URL.DataAccess.Interfaces\Cut_URL.DataAccess.Interfaces.csproj" />
   </ItemGroup>
 

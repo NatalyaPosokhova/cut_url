@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Cut_URL.Tests/1.0.0": {
         "dependencies": {
+          "Cut_URL.Business_Logic": "1.0.0",
           "Cut_URL.Business_Logic.Interfaces": "1.0.0",
           "Cut_URL.DataAccess.Interfaces": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.4.0",
@@ -912,6 +913,15 @@
           }
         }
       },
+      "Cut_URL.Business_Logic/1.0.0": {
+        "dependencies": {
+          "Cut_URL.Business_Logic.Interfaces": "1.0.0",
+          "Cut_URL.DataAccess.Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "Cut_URL.Business_Logic.dll": {}
+        }
+      },
       "Cut_URL.Business_Logic.Interfaces/1.0.0": {
         "runtime": {
           "Cut_URL.Business_Logic.Interfaces.dll": {}
@@ -1391,6 +1401,11 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "Cut_URL.Business_Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Cut_URL.Business_Logic.Interfaces/1.0.0": {
       "type": "project",

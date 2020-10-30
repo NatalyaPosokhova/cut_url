@@ -100,3 +100,5 @@ C:\Users\NPosokhova\Source\Repos\cut_url\cut_URL.Tests\obj\Debug\netcoreapp3.1\c
 C:\Users\NPosokhova\Source\Repos\cut_url\cut_URL.Tests\obj\Debug\netcoreapp3.1\Cut_URL.Tests.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\NPosokhova\Source\Repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\NSubstitute.dll
+C:\Users\NPosokhova\Source\Repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\Cut_URL.Business_Logic.dll
+C:\Users\NPosokhova\Source\Repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\Cut_URL.Business_Logic.pdb
