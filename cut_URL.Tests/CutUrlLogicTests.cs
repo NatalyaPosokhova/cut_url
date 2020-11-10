@@ -7,11 +7,10 @@ namespace Cut_URL.Tests
 {
     public class CreateShortUrlTests
     {
-        private ICutUrlLogic logic;
         [SetUp]
         public void Setup()
         {
-            logic = new CutUrlLogic(null);
+
         }
 
         [Test]
@@ -19,6 +18,9 @@ namespace Cut_URL.Tests
         {
             //Arrange
             string longUrl = "https://docs.google.com/";
+            var generator = Substitute.For<IShortUrlGenerator>();
+            generator.GetShortUrl(longUrl).Returns("cuturl.local/google");
+
             //Actual
 
             //Assert

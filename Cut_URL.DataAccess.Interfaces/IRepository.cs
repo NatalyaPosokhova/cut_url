@@ -6,5 +6,6 @@ namespace Cut_URL.DataAccess
 {
     public interface IRepository
     {
+        public ShortcutUrlData GetUrlDataByShortUrl(string shortUrl);
     }
 }
