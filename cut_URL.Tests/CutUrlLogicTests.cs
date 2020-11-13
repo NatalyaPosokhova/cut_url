@@ -18,9 +18,10 @@ namespace Cut_URL.Tests
         {
             //Arrange
             string longUrl = "https://docs.google.com/";
+            string shortUrl = "cuturl.local/google";
             var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns("cuturl.local/google");
-
+            generator.GetShortUrl(longUrl).Returns(shortUrl);
+           
             //Actual
 
 
@@ -31,26 +32,55 @@ namespace Cut_URL.Tests
         public void CannotAddUrlToDatabase()
         {
             //Arrange
-             //Actual
+            string userId = "1";
+            string shortUrl = "cuturl.local/google";
+            string longUrl = "https://docs.google.com/";
+            
+            var repository = Substitute.For<IRepository>();
+            repository.When(x => x.AddShortUrlData(userId, shortUrl, longUrl)).Do(x => { throw new DataAccessException("Cannot add Url to database."); });
 
+            var generator = Substitute.For<IShortUrlGenerator>();
+
+            var logic = new CutUrlLogic(repository, generator);
+            //Actual
             //Assert
-
+            Assert.Throws<DataAccessException>(() => logic.Run());
         }
+
         [Test]
         public void NotUniqueUrlShouldBeGeneratedNew()
         {
             //Arrange
-            //Actual
+            string longUrl = "https://docs.google.com/";
+            string shortUrl = "cuturl.local/google";
 
+            var generator = Substitute.For<IShortUrlGenerator>();
+            generator.GetShortUrl(longUrl).Returns(shortUrl);
+
+            var repository = Substitute.For<IRepository>();
+            repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("The Url has already exists in DataBase."); });
+
+            var logic = new CutUrlLogic(repository, generator);
+
+            //Actual
             //Assert
+
         }
         [Test]
         public void CannotGetUrlDataShouldBeException()
         {
             //Arrange
-            //Actual
+            string shortUrl = "cuturl.local/google";
 
+            var repository = Substitute.For<IRepository>();
+            repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("Cannot get data from Database."); });
+
+            var generator = Substitute.For<IShortUrlGenerator>();
+
+            var logic = new CutUrlLogic(repository, generator);
+            //Actual
             //Assert
+            Assert.Throws<DataAccessException>(() => logic.Run());
         }
     }
 }

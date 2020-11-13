@@ -6,5 +6,6 @@ namespace Cut_URL.Business_Logic
 {
     public interface ICutUrlLogic
     {
+        public void Run();
     }
 }

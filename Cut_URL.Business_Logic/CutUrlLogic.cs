@@ -8,9 +8,16 @@ namespace Cut_URL.Business_Logic
     public class CutUrlLogic : ICutUrlLogic
     {
         private IRepository _repository;
-        public CutUrlLogic(IRepository repository)
+        private IShortUrlGenerator _urlGenerator;
+        public CutUrlLogic(IRepository repository, IShortUrlGenerator urlGenerator)
         {
             _repository = repository;
+            _urlGenerator = urlGenerator;
+        }
+
+        public void Run()
+        {
+            throw new NotImplementedException();
         }
     }
 }
