@@ -2,6 +2,7 @@ using NUnit.Framework;
 using NSubstitute;
 using Cut_URL.DataAccess;
 using Cut_URL.Business_Logic;
+using System;
 
 namespace Cut_URL.Tests
 {
@@ -43,19 +44,33 @@ namespace Cut_URL.Tests
         public void CannotAddUrlToDatabase()
         {
             //Arrange
-            string userId = "1";
+            string userId = "1234";
             string shortUrl = "cuturl.local/google";
             string longUrl = "https://docs.google.com/";
+            ShortcutUrlData urlData = new ShortcutUrlData()
+            {
+                UserId = userId,
+                ShortUrl = shortUrl,
+                LongUrl = longUrl,
+                Date = DateTime.Now,
+                TransferQuantity = 0
+            };
             
             var repository = Substitute.For<IRepository>();
+            repository.IsShortUrlExists(shortUrl).Returns(false);
+            repository.GetUrlDataByShortUrl(shortUrl).Returns(urlData);
             repository.When(x => x.AddShortUrlData(userId, shortUrl, longUrl)).Do(x => { throw new DataAccessException("Cannot add Url to database."); });
 
             var generator = Substitute.For<IShortUrlGenerator>();
+            generator.GetShortUrl(longUrl).Returns(shortUrl);
 
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
-            //Actual
-            //Assert
 
+            //Actual
+            var actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
+
+            //Assert
+            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, shortUrl));
         }
 
         [Test]
