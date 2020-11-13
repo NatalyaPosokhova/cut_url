@@ -25,6 +25,8 @@ namespace Cut_URL.Tests
             generator.GetShortUrl(longUrl).Returns(expectedUrl);
 
             IRepository repository = Substitute.For<IRepository>();
+            repository.IsShortUrlExists(expectedUrl).Returns(false);
+            repository.AddShortUrlData(userId, expectedUrl, longUrl);
 
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 
@@ -32,6 +34,9 @@ namespace Cut_URL.Tests
             string actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
 
             //Assert
+            Assert.AreEqual(expectedUrl, actualUrl);
+            repository.Received().IsShortUrlExists(expectedUrl);
+            repository.Received().AddShortUrlData(userId, expectedUrl, longUrl);
         }
 
         [Test]
