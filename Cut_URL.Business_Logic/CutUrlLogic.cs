@@ -15,5 +15,9 @@ namespace Cut_URL.Business_Logic
             _urlGenerator = urlGenerator;
         }
 
+        public string CreateShortUrlFromLong(string longUrl, string userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

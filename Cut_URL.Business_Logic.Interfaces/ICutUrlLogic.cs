@@ -6,6 +6,6 @@ namespace Cut_URL.Business_Logic
 {
     public interface ICutUrlLogic
     {
-
+        string CreateShortUrlFromLong(string longUrl, string userId);
     }
 }

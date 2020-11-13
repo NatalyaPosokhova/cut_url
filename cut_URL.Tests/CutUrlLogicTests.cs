@@ -18,12 +18,18 @@ namespace Cut_URL.Tests
         {
             //Arrange
             string longUrl = "https://docs.google.com/";
-            string shortUrl = "cuturl.local/google";
-            var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(shortUrl);
-           
-            //Actual
+            string expectedUrl = "cuturl.local/google";
+            string userId = "1234";
 
+            IShortUrlGenerator generator = Substitute.For<IShortUrlGenerator>();
+            generator.GetShortUrl(longUrl).Returns(expectedUrl);
+
+            IRepository repository = Substitute.For<IRepository>();
+
+            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
+
+            //Actual
+            string actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
 
             //Assert
         }
@@ -41,7 +47,7 @@ namespace Cut_URL.Tests
 
             var generator = Substitute.For<IShortUrlGenerator>();
 
-            var logic = new CutUrlLogic(repository, generator);
+            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
             //Actual
             //Assert
 
@@ -60,7 +66,7 @@ namespace Cut_URL.Tests
             var repository = Substitute.For<IRepository>();
             repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("The Url has already exists in DataBase."); });
 
-            var logic = new CutUrlLogic(repository, generator);
+            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 
             //Actual
             //Assert
@@ -77,7 +83,7 @@ namespace Cut_URL.Tests
 
             var generator = Substitute.For<IShortUrlGenerator>();
 
-            var logic = new CutUrlLogic(repository, generator);
+            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
             //Actual
             //Assert
 
