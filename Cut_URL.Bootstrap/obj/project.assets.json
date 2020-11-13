@@ -87,11 +87,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Bootstrap\\Cut_URL.Bootstrap.csproj",
+      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Bootstrap\\Cut_URL.Bootstrap.csproj",
       "projectName": "Cut_URL.Bootstrap",
-      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Bootstrap\\Cut_URL.Bootstrap.csproj",
+      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Bootstrap\\Cut_URL.Bootstrap.csproj",
       "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Bootstrap\\obj\\",
+      "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Bootstrap\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,17 +107,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj"
+            "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj"
             },
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj"
+            "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj"
             },
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
+            "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
             },
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj"
+            "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj"
             }
           }
         }
