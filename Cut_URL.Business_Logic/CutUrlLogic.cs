@@ -15,9 +15,5 @@ namespace Cut_URL.Business_Logic
             _urlGenerator = urlGenerator;
         }
 
-        public void Run()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
