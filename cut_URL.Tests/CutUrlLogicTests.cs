@@ -23,6 +23,33 @@ namespace Cut_URL.Tests
 
             //Actual
 
+
+            //Assert
+        }
+
+        [Test]
+        public void CannotAddUrlToDatabase()
+        {
+            //Arrange
+            //Actual
+
+            //Assert
+
+        }
+        [Test]
+        public void NotUniqueUrlShouldBeGeneratedNew()
+        {
+            //Arrange
+            //Actual
+
+            //Assert
+        }
+        [Test]
+        public void CannotGetUrlDataShouldBeException()
+        {
+            //Arrange
+            //Actual
+
             //Assert
         }
     }
