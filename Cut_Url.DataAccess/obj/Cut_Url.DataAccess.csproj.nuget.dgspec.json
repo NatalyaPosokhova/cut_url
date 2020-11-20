@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj": {}
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
         "projectName": "Cut_URL.DataAccess.Interfaces",
-        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
+        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
         "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj": {
+    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj",
         "projectName": "Cut_Url.DataAccess",
-        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj",
+        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\Cut_Url.DataAccess.csproj",
         "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_Url.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_Url.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
+              "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
               }
             }
           }
