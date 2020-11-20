@@ -6,3 +6,4 @@ C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\D
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.dll
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.pdb
+C:\Users\NPosokhova\Source\Repos\Cut_URL\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csprojAssemblyReference.cache

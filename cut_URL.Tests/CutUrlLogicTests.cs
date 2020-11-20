@@ -79,33 +79,45 @@ namespace Cut_URL.Tests
             //Arrange
             string longUrl = "https://docs.google.com/";
             string shortUrl = "cuturl.local/google";
+            string secondShortUrl = "cuturl.local/ggl";
+            string userId = "1234";
 
             var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(shortUrl);
+            generator.GetShortUrl(longUrl).Returns(shortUrl, secondShortUrl);
 
             var repository = Substitute.For<IRepository>();
-            repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("The Url has already exists in DataBase."); });
-
+            repository.IsShortUrlExists(shortUrl).Returns(false);
+            repository.IsShortUrlExists(secondShortUrl).Returns(true);
+        
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 
             //Actual
-            //Assert
+            var actual = logic.CreateShortUrlFromLong(longUrl, userId);
 
+            //Assert
+            Assert.AreEqual(actual, secondShortUrl);
+            repository.GetUrlDataByShortUrl(secondShortUrl).Received();
         }
         [Test]
         public void CannotGetUrlDataShouldBeException()
         {
             //Arrange
             string shortUrl = "cuturl.local/google";
+            string longUrl = "https://docs.google.com/";
+            string userId = "1234";
 
             var repository = Substitute.For<IRepository>();
+            repository.IsShortUrlExists(shortUrl).Returns(false);
             repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("Cannot get data from Database."); });
 
             var generator = Substitute.For<IShortUrlGenerator>();
+            generator.GetShortUrl(longUrl).Returns(shortUrl);
 
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
+
             //Actual
             //Assert
+            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
 
         }
     }
