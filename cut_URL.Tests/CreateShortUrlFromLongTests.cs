@@ -56,13 +56,13 @@ namespace Cut_URL.Tests
                 TransferQuantity = 0
             };
             
+            var generator = Substitute.For<IShortUrlGenerator>();
+            generator.GetShortUrl(longUrl).Returns(shortUrl);
+
             var repository = Substitute.For<IRepository>();
             repository.IsShortUrlExists(shortUrl).Returns(false);
             repository.GetUrlDataByShortUrl(shortUrl).Returns(urlData);
             repository.When(x => x.AddShortUrlData(userId, shortUrl, longUrl)).Do(x => { throw new DataAccessException("Cannot add Url to database."); });
-
-            var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(shortUrl);
 
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 

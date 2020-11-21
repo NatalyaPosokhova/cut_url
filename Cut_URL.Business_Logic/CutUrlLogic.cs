@@ -37,5 +37,10 @@ namespace Cut_URL.Business_Logic
           
             return shortUrl;
         }
+
+        public string GetLongUrlFromShort(string shortUrl, string userId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
