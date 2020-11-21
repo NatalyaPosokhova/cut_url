@@ -39,5 +39,25 @@ namespace Cut_URL.Tests
             Assert.AreEqual(longExpectedUrl, longActualUrl);
             repository.Received().GetUrlDataByShortUrl(shortUrl);
         }
+
+        [Test]
+        public void CannotGetUrlFromDatabase()
+        {
+            //Arrange
+            string shortUrl = "cuturl.local/google";
+            string longExpectedUrl = "https://docs.google.com/";
+            string userId = "1234";
+
+            var generator = Substitute.For<IShortUrlGenerator>();
+            var repository = Substitute.For<IRepository>();
+            repository.GetUrlDataByShortUrl(shortUrl);
+            repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("Cannot get Url from database."); });
+
+            var logic = new CutUrlLogic(repository, generator);
+
+            //Actual
+            //Assert
+            Assert.Throws<DataAccessException>(() => logic.GetLongUrlFromShort(shortUrl, userId));
+        }
     }
 }

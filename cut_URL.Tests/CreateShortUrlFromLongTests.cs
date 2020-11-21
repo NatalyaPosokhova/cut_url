@@ -67,10 +67,10 @@ namespace Cut_URL.Tests
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 
             //Actual
-            var actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
+           // var actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
 
             //Assert
-            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, shortUrl));
+            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
         }
 
         [Test]
