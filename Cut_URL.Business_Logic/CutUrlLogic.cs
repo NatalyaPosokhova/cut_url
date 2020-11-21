@@ -17,11 +17,15 @@ namespace Cut_URL.Business_Logic
 
         public string CreateShortUrlFromLong(string longUrl, string userId)
         {
-            var shortUrl = _urlGenerator.GetShortUrl(longUrl);
-            if(!_repository.IsShortUrlExists(shortUrl))
+            var shortUrl = String.Empty;
+            do
             {
-                _repository.AddShortUrlData(userId, shortUrl, longUrl);
-            }
+                shortUrl = _urlGenerator.GetShortUrl(longUrl);
+
+            } while(_repository.IsShortUrlExists(shortUrl));
+
+            _repository.AddShortUrlData(userId, shortUrl, longUrl);
+
             return shortUrl;
         }
     }
