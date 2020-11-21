@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 using NSubstitute;
 using Cut_URL.DataAccess;
@@ -45,7 +43,6 @@ namespace Cut_URL.Tests
         {
             //Arrange
             string shortUrl = "cuturl.local/google";
-            string longExpectedUrl = "https://docs.google.com/";
             string userId = "1234";
 
             var generator = Substitute.For<IShortUrlGenerator>();
