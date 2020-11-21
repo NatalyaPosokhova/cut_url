@@ -6,4 +6,3 @@ C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.dll
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.pdb
-C:\Users\NPosokhova\Source\Repos\Cut_URL\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csprojAssemblyReference.cache

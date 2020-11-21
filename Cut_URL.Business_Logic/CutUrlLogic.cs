@@ -35,7 +35,7 @@ namespace Cut_URL.Business_Logic
         {
             ShortcutUrlData urlData = _repository.GetUrlDataByShortUrl(shortUrl);
 
-            return urlData.LongUrl;
+            return urlData.LongUrl ?? throw new ArgumentNullException(nameof(urlData.LongUrl));
         }
     }
 }

@@ -47,7 +47,6 @@ namespace Cut_URL.Tests
 
             var generator = Substitute.For<IShortUrlGenerator>();
             var repository = Substitute.For<IRepository>();
-            repository.GetUrlDataByShortUrl(shortUrl);
             repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("Cannot get Url from database."); });
 
             var logic = new CutUrlLogic(repository, generator);
@@ -55,6 +54,32 @@ namespace Cut_URL.Tests
             //Actual
             //Assert
             Assert.Throws<DataAccessException>(() => logic.GetLongUrlFromShort(shortUrl, userId));
+        }
+
+        [Test]
+        public void TryGetLongUrlWithDatabaseMissedShortUrlShouldBeError()
+        {
+            //Arrange
+            string shortUrl = "cuturl.local/google";
+            string userId = "1234";
+            ShortcutUrlData urlData = new ShortcutUrlData()
+            {
+                UserId = null,
+                ShortUrl = null,
+                LongUrl = null,
+                Date = DateTime.Now,
+                TransferQuantity = 0
+            };
+
+            var generator = Substitute.For<IShortUrlGenerator>();
+            var repository = Substitute.For<IRepository>();
+            repository.GetUrlDataByShortUrl(shortUrl).Returns(urlData);
+
+            var logic = new CutUrlLogic(repository, generator);
+
+            //Actual
+            //Assert
+            Assert.Throws<ArgumentNullException>(() => logic.GetLongUrlFromShort(shortUrl, userId));
         }
     }
 }

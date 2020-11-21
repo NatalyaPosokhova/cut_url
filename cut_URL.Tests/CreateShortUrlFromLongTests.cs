@@ -8,67 +8,61 @@ namespace Cut_URL.Tests
 {
     public class CreateShortUrlTests
     {
+        private IShortUrlGenerator generator;
+        private IRepository repository;
+        private ICutUrlLogic logic;
+        private string longUrl;
+        private string expectedShortUrl;
+        private string userId;
         [SetUp]
         public void Setup()
         {
+            longUrl = "https://docs.google.com/";
+            expectedShortUrl = "cuturl.local/google";
+            userId = "1234";
 
+            generator = Substitute.For<IShortUrlGenerator>();
+            repository = Substitute.For<IRepository>();
+            logic = new CutUrlLogic(repository, generator);
         }
 
         [Test]
         public void LongUrtToShortShoulBeSuccess()
         {
             //Arrange
-            string longUrl = "https://docs.google.com/";
-            string expectedUrl = "cuturl.local/google";
-            string userId = "1234";
+            generator.GetShortUrl(longUrl).Returns(expectedShortUrl);
 
-            IShortUrlGenerator generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(expectedUrl);
-
-            IRepository repository = Substitute.For<IRepository>();
-            repository.IsShortUrlExists(expectedUrl).Returns(false);
-            repository.AddShortUrlData(userId, expectedUrl, longUrl);
-
-            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
+            repository.IsShortUrlExists(expectedShortUrl).Returns(false);
+            repository.AddShortUrlData(userId, expectedShortUrl, longUrl);
 
             //Actual
             string actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
 
             //Assert
-            Assert.AreEqual(expectedUrl, actualUrl);
-            repository.Received().IsShortUrlExists(expectedUrl);
-            repository.Received().AddShortUrlData(userId, expectedUrl, longUrl);
+            Assert.AreEqual(expectedShortUrl, actualUrl);
+            repository.Received().IsShortUrlExists(expectedShortUrl);
+            repository.Received().AddShortUrlData(userId, expectedShortUrl, longUrl);
         }
 
         [Test]
         public void CannotAddUrlToDatabase()
         {
-            //Arrange
-            string userId = "1234";
-            string shortUrl = "cuturl.local/google";
-            string longUrl = "https://docs.google.com/";
             ShortcutUrlData urlData = new ShortcutUrlData()
             {
                 UserId = userId,
-                ShortUrl = shortUrl,
+                ShortUrl = expectedShortUrl,
                 LongUrl = longUrl,
                 Date = DateTime.Now,
                 TransferQuantity = 0
             };
             
-            var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(shortUrl);
+            generator.GetShortUrl(longUrl).Returns(expectedShortUrl);
 
-            var repository = Substitute.For<IRepository>();
-            repository.IsShortUrlExists(shortUrl).Returns(false);
-            repository.GetUrlDataByShortUrl(shortUrl).Returns(urlData);
-            repository.When(x => x.AddShortUrlData(userId, shortUrl, longUrl)).Do(x => { throw new DataAccessException("Cannot add Url to database."); });
-
-            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
+            repository.IsShortUrlExists(expectedShortUrl).Returns(false);
+            repository.GetUrlDataByShortUrl(expectedShortUrl).Returns(urlData);
+            repository.When(x => x.AddShortUrlData(userId, expectedShortUrl, longUrl)).Do(x => { throw new DataAccessException("Cannot add Url to database."); });
 
             //Actual
-           // var actualUrl = logic.CreateShortUrlFromLong(longUrl, userId);
-
             //Assert
             Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
         }
@@ -77,48 +71,31 @@ namespace Cut_URL.Tests
         public void NotUniqueUrlShouldBeGeneratedNew()
         {
             //Arrange
-            string longUrl = "https://docs.google.com/";
-            string shortUrl = "cuturl.local/google";
             string secondShortUrl = "cuturl.local/ggl";
-            string userId = "1234";
 
-            var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(shortUrl, secondShortUrl);
+            generator.GetShortUrl(longUrl).Returns(expectedShortUrl, secondShortUrl);
 
-            var repository = Substitute.For<IRepository>();
-            repository.IsShortUrlExists(shortUrl).Returns(true);
+            repository.IsShortUrlExists(expectedShortUrl).Returns(true);
             repository.IsShortUrlExists(secondShortUrl).Returns(false);
-
-            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 
             //Actual
             var actual = logic.CreateShortUrlFromLong(longUrl, userId);
 
             //Assert
             Assert.AreEqual(actual, secondShortUrl);
-            //repository.GetUrlDataByShortUrl(secondShortUrl).Received();
         }
         [Test]
         public void CannotGetUrlDataShouldBeException()
         {
             //Arrange
-            string shortUrl = "cuturl.local/google";
-            string longUrl = "https://docs.google.com/";
-            string userId = "1234";
+            repository.IsShortUrlExists(expectedShortUrl).Returns(false);
+            repository.When(x => x.GetUrlDataByShortUrl(expectedShortUrl)).Do(x => { throw new DataAccessException("Cannot get data from Database."); });
 
-            var repository = Substitute.For<IRepository>();
-            repository.IsShortUrlExists(shortUrl).Returns(false);
-            repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("Cannot get data from Database."); });
-
-            var generator = Substitute.For<IShortUrlGenerator>();
-            generator.GetShortUrl(longUrl).Returns(shortUrl);
-
-            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
+            generator.GetShortUrl(longUrl).Returns(expectedShortUrl);
 
             //Actual
             //Assert
             Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
-
         }
     }
 }
