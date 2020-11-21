@@ -86,9 +86,9 @@ namespace Cut_URL.Tests
             generator.GetShortUrl(longUrl).Returns(shortUrl, secondShortUrl);
 
             var repository = Substitute.For<IRepository>();
-            repository.IsShortUrlExists(shortUrl).Returns(false);
-            repository.IsShortUrlExists(secondShortUrl).Returns(true);
-        
+            repository.IsShortUrlExists(shortUrl).Returns(true);
+            repository.IsShortUrlExists(secondShortUrl).Returns(false);
+
             ICutUrlLogic logic = new CutUrlLogic(repository, generator);
 
             //Actual
@@ -96,7 +96,7 @@ namespace Cut_URL.Tests
 
             //Assert
             Assert.AreEqual(actual, secondShortUrl);
-            repository.GetUrlDataByShortUrl(secondShortUrl).Received();
+            //repository.GetUrlDataByShortUrl(secondShortUrl).Received();
         }
         [Test]
         public void CannotGetUrlDataShouldBeException()
