@@ -27,6 +27,7 @@ namespace Cut_URL.Business_Logic
 
                 } while (_repository.IsShortUrlExists(shortUrl));
 
+                _repository.GetUrlDataByShortUrl(shortUrl);
                 _repository.AddShortUrlData(userId, shortUrl, longUrl);
             }
             catch(DataAccessException ex)
