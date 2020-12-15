@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZVSVIwM+cNa9B3Ryy0zBYVQg1dAC9O98BSHM9C+0hvVOFXcdAd9T6A8ugjzq3Fn01FiIQLmSG4b+4rqPZbv8IA==",
+  "dgSpecHash": "NpEaFgSxo2fzd10udGwUuB+d5hI9iuoOJpUBWExMkYf7ae3OtduZ6i1mH3nA8/xTo/Q7oi77YhFB8pPHoo/eqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NPosokhova\\Source\\Repos\\Cut_URL\\cut_URL.Tests\\Cut_URL.Tests.csproj",
+  "projectFilePath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NPosokhova\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\NPosokhova\\.nuget\\packages\\microsoft.codecoverage\\16.4.0\\microsoft.codecoverage.16.4.0.nupkg.sha512",
