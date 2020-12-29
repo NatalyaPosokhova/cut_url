@@ -64,7 +64,7 @@ namespace Cut_URL.Tests
 
             //Actual
             //Assert
-            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
+            Assert.Throws<CreateShortUrlException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
         }
 
         [Test]
@@ -95,7 +95,7 @@ namespace Cut_URL.Tests
 
             //Actual
             //Assert
-            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
+            Assert.Throws<CreateShortUrlException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
         }
     }
 }
