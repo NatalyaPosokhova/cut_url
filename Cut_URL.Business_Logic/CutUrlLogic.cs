@@ -39,9 +39,15 @@ namespace Cut_URL.Business_Logic
 
         public string GetLongUrlFromShort(string shortUrl, string userId)
         {
-            ShortcutUrlData urlData = _repository.GetUrlDataByShortUrl(shortUrl);
-
-            return urlData.LongUrl ?? throw new ArgumentNullException(nameof(urlData.LongUrl));
+            try
+            {
+                ShortcutUrlData urlData = _repository.GetUrlDataByShortUrl(shortUrl);
+                return urlData.LongUrl;
+            }
+            catch(DataAccessException ex)
+            {
+                throw new GetLongUrlException(ex.Message, ex);
+            }
         }
     }
 }
