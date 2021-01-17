@@ -63,7 +63,7 @@ namespace Cut_URL.Tests
 
             string shortUrl = "cuturl.local/google";
             string userId = "1234";
-            int newTransferQuantity = 1;
+
             ShortcutUrlData urlData = new ShortcutUrlData()
             {
                 UserId = "1234",
@@ -81,6 +81,7 @@ namespace Cut_URL.Tests
 
             var logic = new CutUrlLogic(repository, generator);
             logic.GetLongUrlFromShort(shortUrl, userId);
+
             var new_val = urlData.TransferQuantity;
             //Actual
             //Assert

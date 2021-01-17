@@ -42,6 +42,8 @@ namespace Cut_URL.Business_Logic
             try
             {
                 ShortcutUrlData urlData = _repository.GetUrlDataByShortUrl(shortUrl);
+                urlData.TransferQuantity++;
+                _repository.SaveUrlData(urlData);
                 return urlData.LongUrl;
             }
             catch(DataAccessException ex)
