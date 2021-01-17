@@ -27,12 +27,19 @@ namespace Cut_Url.DataAccess
                 Date = DateTime.Now,
                 TransferQuantity = 0
             };
-
-            using (IDbConnection db = new MySqlConnection(_connectionString))
+            try
             {
-                var mySqlQuery = "INSERT INTO UrlData (UserId, ShortUrl, LongUrl) VALUES(@UserId, @ShortUrl, @LongUrl)";
-                db.Execute(mySqlQuery, urlData);
+                using (IDbConnection db = new MySqlConnection(_connectionString))
+                {
+                    var mySqlQuery = "INSERT INTO UrlData (UserId, ShortUrl, LongUrl) VALUES(@UserId, @ShortUrl, @LongUrl)";
+                    db.Execute(mySqlQuery, urlData);
+                }
             }
+            catch (DataAccessException)
+            {
+                throw new DataAccessException("Error during adding data to database occured.");
+            }
+
         }
 
         public ShortcutUrlData GetUrlDataByShortUrl(string shortUrl)
