@@ -53,13 +53,28 @@ namespace Cut_Url.DataAccess
             }
             catch (DataAccessException)
             {
-                throw new DataAccessException("Error during adding data to database occured.");
+                throw new DataAccessException("Error occured during get data from database.");
             }
         }
 
         public bool IsShortUrlExists(string shortUrl)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (IDbConnection db = new MySqlConnection(_connectionString))
+                {
+                    var urlData = db.Query<ShortcutUrlData>("SELECT COUNT(1) FROM UrlData where ShortUrl=@shortUrl", new { shortUrl });
+                    if(urlData != null)
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch (DataAccessException)
+            {
+                throw new DataAccessException("Error occured during get data from database.");
+            }
+            return false;
         }
 
         public void SaveUrlData(ShortcutUrlData urlData)

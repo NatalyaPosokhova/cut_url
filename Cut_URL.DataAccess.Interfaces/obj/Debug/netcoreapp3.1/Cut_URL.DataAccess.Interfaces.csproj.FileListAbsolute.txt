@@ -15,3 +15,4 @@ C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netco
 C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.dll
 C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.pdb
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csprojAssemblyReference.cache
