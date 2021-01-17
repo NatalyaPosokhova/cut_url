@@ -27,11 +27,12 @@ namespace Cut_Url.DataAccess
                 Date = DateTime.Now,
                 TransferQuantity = 0
             };
+
             try
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    var mySqlQuery = "INSERT INTO UrlData (UserId, ShortUrl, LongUrl) VALUES(@UserId, @ShortUrl, @LongUrl)";
+                    var mySqlQuery = "INSERT INTO UrlData (UserId, ShortUrl, LongUrl, Date, TransferQuantity) VALUES(@UserId, @ShortUrl, @LongUrl, @Date, @TransferQuantity)";
                     db.Execute(mySqlQuery, urlData);
                 }
             }
