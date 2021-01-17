@@ -40,12 +40,21 @@ namespace Cut_Url.DataAccess
             {
                 throw new DataAccessException("Error during adding data to database occured.");
             }
-
         }
 
         public ShortcutUrlData GetUrlDataByShortUrl(string shortUrl)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (IDbConnection db = new MySqlConnection(_connectionString))
+                {
+                    return (ShortcutUrlData)db.Query<ShortcutUrlData>("SELECT * FROM UrlData WHERE ShortUrl = @shortUrl", new { shortUrl });
+                }
+            }
+            catch (DataAccessException)
+            {
+                throw new DataAccessException("Error during adding data to database occured.");
+            }
         }
 
         public bool IsShortUrlExists(string shortUrl)
