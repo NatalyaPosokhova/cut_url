@@ -32,7 +32,7 @@ namespace Cut_Url.DataAccess
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    var mySqlQuery = "INSERT INTO UrlData (UserId, ShortUrl, LongUrl, Date, TransferQuantity) VALUES(@UserId, @ShortUrl, @LongUrl, @Date, @TransferQuantity)";
+                    var mySqlQuery = "INSERT INTO ShortcutUrlData (UserId, ShortUrl, LongUrl, Date, TransferQuantity) VALUES(@UserId, @ShortUrl, @LongUrl, @Date, @TransferQuantity)";
                     db.Execute(mySqlQuery, urlData);
                 }
             }
@@ -48,7 +48,7 @@ namespace Cut_Url.DataAccess
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    return (ShortcutUrlData)db.Query<ShortcutUrlData>("SELECT * FROM UrlData WHERE ShortUrl = @shortUrl", new { shortUrl });
+                    return (ShortcutUrlData)db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData WHERE ShortUrl = @shortUrl", new { shortUrl });
                 }
             }
             catch (DataAccessException)
@@ -63,7 +63,7 @@ namespace Cut_Url.DataAccess
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    var urlData = db.Query<ShortcutUrlData>("SELECT COUNT(1) FROM UrlData where ShortUrl=@shortUrl", new { shortUrl });
+                    var urlData = db.Query<ShortcutUrlData>("SELECT COUNT(1) FROM ShortcutUrlData where ShortUrl=@shortUrl", new { shortUrl });
                     if(urlData != null)
                     {
                         return true;
