@@ -9,9 +9,14 @@ using System.Data;
 
 namespace Cut_Url.DataAccess
 {
-    class Repository : IRepository
+    public class Repository : IRepository
     {
         string _connectionString = null;
+
+        public Repository()
+        {
+        }
+
         public Repository(string connectionString)
         {
             _connectionString = connectionString;
@@ -79,7 +84,11 @@ namespace Cut_Url.DataAccess
 
         public void SaveUrlData(ShortcutUrlData urlData)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new MySqlConnection(_connectionString))
+            {
+                var sqlQuery = "UPDATE ShortcutUrlData SET Date = @Date, TransferQuantity = @TransferQuantity, ShortUrl = @ShortUrl, LongUrl = @LongUrl  WHERE Id = @Id";
+                db.Execute(sqlQuery, urlData);
+            }    
         }
     }
 }

@@ -3,6 +3,7 @@ using NSubstitute;
 using Cut_URL.DataAccess;
 using Cut_URL.Business_Logic;
 using System;
+using Cut_Url.DataAccess;
 
 namespace Cut_URL.Tests
 {
@@ -23,6 +24,7 @@ namespace Cut_URL.Tests
 
             generator = Substitute.For<IShortUrlGenerator>();
             repository = Substitute.For<IRepository>();
+            //repository = new Repository();
             logic = new CutUrlLogic(repository, generator);
         }
 
