@@ -23,6 +23,14 @@ namespace Cut_URL.Tests
             _logic = new Business_Logic.CutUrlLogic(_repository, _generator);
         }
 
+        //[TestFixture]
+        //public class SuccessTests
+        //{
+        //    [TestFixtureSetUp]
+        //    public void Init()
+        //    { /* ... */ }
+        //}
+
         [Test]
         public void TryInsertShortCutUrlDataShouldBeSuccess()
         {

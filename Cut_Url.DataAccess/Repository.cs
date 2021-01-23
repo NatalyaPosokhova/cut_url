@@ -82,7 +82,16 @@ namespace CutUrlLogic.DataAccess
             }
             return false;
         }
-
+        public void DeleteAllData()
+        {
+            using (IDbConnection db = new MySqlConnection(_connectionString))
+            {
+                var mySqlQuery = "DELETE FROM ShortcutUrlData";
+                db.Execute(mySqlQuery);
+                //var sqlQuery = "DELETE FROM Users WHERE Id = @id";
+                //db.Execute(sqlQuery, new { id });
+            }
+        }
         public void SaveUrlData(ShortcutUrlData urlData)
         {
             using (IDbConnection db = new MySqlConnection(_connectionString))
