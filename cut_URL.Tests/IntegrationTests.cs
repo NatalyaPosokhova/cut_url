@@ -6,30 +6,36 @@ using NUnit.Framework;
 using NSubstitute;
 using System.Collections.Generic;
 using KellermanSoftware.CompareNetObjects;
+using MySqlConnector;
+using System.Data;
+using Dapper;
 
 namespace Cut_URL.Tests
 {
+    [TestFixture]
     public class IntegrationTests
     {
         private IRepository _repository;
         private ShortUrlGenerator _generator;
         private ICutUrlLogic _logic;
+        private const string connectionString = "server=localhost;database=cutUrlDB;user=root;password=qwerty";
 
         [SetUp]
         public void SetUp()
         {
-            _repository = new Repository("server=localhost;database=cutUrlDB;user=root;password=qwerty");
+            _repository = new Repository(connectionString);
             _generator = Substitute.For<ShortUrlGenerator>();
             _logic = new Business_Logic.CutUrlLogic(_repository, _generator);
         }
-
-        //[TestFixture]
-        //public class SuccessTests
-        //{
-        //    [TestFixtureSetUp]
-        //    public void Init()
-        //    { /* ... */ }
-        //}
+        [OneTimeSetUp]
+        public void Init()
+        {
+            using (IDbConnection db = new MySqlConnection(connectionString))
+            {
+                var mySqlQuery = "DELETE FROM ShortcutUrlData";
+                db.Execute(mySqlQuery);
+            }
+        }
 
         [Test]
         public void TryInsertShortCutUrlDataShouldBeSuccess()
@@ -37,7 +43,7 @@ namespace Cut_URL.Tests
             string userId = "1234";
             string shortUrl = "cuturl.local/google";
             string longUrl = "https://docs.google.com/";
-                        
+
             _repository.AddShortUrlData(userId, shortUrl, longUrl);
         }
 
@@ -60,7 +66,7 @@ namespace Cut_URL.Tests
 
             //Actual
             _repository.AddShortUrlData(userId, shortUrl, longUrl);
-            ShortcutUrlData actualUrlData  = _repository.GetUrlDataByShortUrl(shortUrl);
+            ShortcutUrlData actualUrlData = _repository.GetUrlDataByShortUrl(shortUrl);
 
             //Assert
             Assert.IsTrue(expectedUrlData.Equals(actualUrlData));
