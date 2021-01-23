@@ -6,3 +6,12 @@ C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\D
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.dll
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.pdb
+C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csprojAssemblyReference.cache
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\bin\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.deps.json
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\bin\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.dll
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\bin\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.pdb
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.AssemblyInfo.cs
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.dll
+C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.pdb

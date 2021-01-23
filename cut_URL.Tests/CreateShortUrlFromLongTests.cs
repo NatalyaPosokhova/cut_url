@@ -3,6 +3,7 @@ using NSubstitute;
 using Cut_URL.DataAccess;
 using Cut_URL.Business_Logic;
 using System;
+using CutUrlLogic.DataAccess;
 
 namespace Cut_URL.Tests
 {
@@ -23,7 +24,8 @@ namespace Cut_URL.Tests
 
             generator = Substitute.For<IShortUrlGenerator>();
             repository = Substitute.For<IRepository>();
-            logic = new CutUrlLogic(repository, generator);
+            //repository = new Repository();
+            logic = new Business_Logic.CutUrlLogic(repository, generator);
         }
 
         [Test]
@@ -64,7 +66,7 @@ namespace Cut_URL.Tests
 
             //Actual
             //Assert
-            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
+            Assert.Throws<CreateShortUrlException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
         }
 
         [Test]
@@ -95,7 +97,7 @@ namespace Cut_URL.Tests
 
             //Actual
             //Assert
-            Assert.Throws<DataAccessException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
+            Assert.Throws<CreateShortUrlException>(() => logic.CreateShortUrlFromLong(longUrl, userId));
         }
     }
 }

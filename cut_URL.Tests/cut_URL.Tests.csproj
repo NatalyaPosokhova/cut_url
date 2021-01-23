@@ -7,9 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CompareNETObjects" Version="4.70.0" />
     <PackageReference Include="NSubstitute" Version="4.2.2" />
-    <PackageReference Include="nunit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+    <PackageReference Include="nunit" Version="3.13.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
   </ItemGroup>
 
@@ -17,6 +18,7 @@
     <ProjectReference Include="..\Cut_URL.Business_Logic.Interfaces\Cut_URL.Business_Logic.Interfaces.csproj" />
     <ProjectReference Include="..\Cut_URL.Business_Logic\Cut_URL.Business_Logic.csproj" />
     <ProjectReference Include="..\Cut_URL.DataAccess.Interfaces\Cut_URL.DataAccess.Interfaces.csproj" />
+    <ProjectReference Include="..\Cut_Url.DataAccess\Cut_Url.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

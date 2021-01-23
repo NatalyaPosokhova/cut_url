@@ -6,3 +6,13 @@ C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.dll
 C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.pdb
+C:\Users\NPosokhova\Source\Repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csprojAssemblyReference.cache
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\bin\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.deps.json
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\bin\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.dll
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\bin\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.pdb
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.AssemblyInfo.cs
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.dll
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.pdb
+C:\Users\Nata\source\repos\cut_url\Cut_URL.DataAccess.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.DataAccess.Interfaces.csprojAssemblyReference.cache
