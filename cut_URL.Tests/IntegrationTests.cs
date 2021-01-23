@@ -41,7 +41,6 @@ namespace Cut_URL.Tests
             string shortUrl = "cuturl.local/google";
             string longUrl = "https://docs.google.com/";
             int transferQuantity = 0;
-            DateTime date = DateTime.Now;
 
             ShortcutUrlData expectedUrlData = new ShortcutUrlData
             {
