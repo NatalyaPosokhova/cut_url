@@ -28,7 +28,7 @@ namespace Cut_URL.Tests
             var repository = Substitute.For<IRepository>();
             repository.GetUrlDataByShortUrl(shortUrl).Returns(urlData);
 
-            ICutUrlLogic logic = new CutUrlLogic(repository, generator);
+            ICutUrlLogic logic = new Business_Logic.CutUrlLogic(repository, generator);
 
             //Actual
             string longActualUrl = logic.GetLongUrlFromShort(shortUrl, userId);
@@ -49,7 +49,7 @@ namespace Cut_URL.Tests
             var repository = Substitute.For<IRepository>();
             repository.When(x => x.GetUrlDataByShortUrl(shortUrl)).Do(x => { throw new DataAccessException("Cannot get Url from database."); });
 
-            var logic = new CutUrlLogic(repository, generator);
+            var logic = new Business_Logic.CutUrlLogic(repository, generator);
 
             //Actual
             //Assert
@@ -79,7 +79,7 @@ namespace Cut_URL.Tests
 
             repository.GetUrlDataByShortUrl(shortUrl).Returns(urlData);
 
-            var logic = new CutUrlLogic(repository, generator);
+            var logic = new Business_Logic.CutUrlLogic(repository, generator);
             logic.GetLongUrlFromShort(shortUrl, userId);
 
             var new_val = urlData.TransferQuantity;

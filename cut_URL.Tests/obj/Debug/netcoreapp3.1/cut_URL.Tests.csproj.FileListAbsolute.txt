@@ -226,3 +226,4 @@ C:\Users\Nata\source\repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\runtime
 C:\Users\Nata\source\repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Nata\source\repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\Cut_Url.DataAccess.dll
 C:\Users\Nata\source\repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\Cut_Url.DataAccess.pdb
+C:\Users\Nata\source\repos\cut_url\cut_URL.Tests\bin\Debug\netcoreapp3.1\KellermanSoftware.Compare-NET-Objects.dll

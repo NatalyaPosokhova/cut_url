@@ -6,8 +6,9 @@ using Dapper;
 using System.Configuration;
 using MySqlConnector;
 using System.Data;
+using System.Linq;
 
-namespace Cut_Url.DataAccess
+namespace CutUrlLogic.DataAccess
 {
     public class Repository : IRepository
     {
@@ -53,7 +54,7 @@ namespace Cut_Url.DataAccess
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    return (ShortcutUrlData)db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData WHERE ShortUrl = @shortUrl", new { shortUrl });
+                    return db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData WHERE ShortUrl = @shortUrl", new { shortUrl }).FirstOrDefault();
                 }
             }
             catch (DataAccessException)
