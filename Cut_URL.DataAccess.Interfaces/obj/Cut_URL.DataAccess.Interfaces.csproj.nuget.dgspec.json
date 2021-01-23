@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {}
+    "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
+    "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
         "projectName": "Cut_URL.DataAccess.Interfaces",
-        "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
-        "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\obj\\",
+        "projectPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Nata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Nata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1385,13 +1385,12 @@
       ]
     },
     "Microsoft.CSharp/4.0.1": {
-      "sha512": "4qhCWmHVLV70OmUGLdJRML92N6gLAN0P3VBWf17uflaFCdK8geXHIbIoAkteQG8bJSR0GQ6LltdBAryjWAFXCg==",
+      "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "type": "package",
       "path": "microsoft.csharp/4.0.1",
       "files": [
         ".nupkg.metadata",
-        "Microsoft.CSharp.4.0.1.nupkg.sha512",
-        "Microsoft.CSharp.nuspec",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1407,6 +1406,8 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.0.1.nupkg.sha512",
+        "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
@@ -2058,13 +2059,12 @@
       ]
     },
     "System.AppContext/4.1.0": {
-      "sha512": "mpF081/NDrVr+GBcRJMDMcRlwAW1fjJ0YuYS1U+1oVc9QOsmBhU6fkm+XtC/sIDNm0Ww0zOBgI8ydEkPZ5pETQ==",
+      "sha512": "3QjO4jNV7PdKkmQAVp9atA+usVnKRwI3Kx1nMwJ93T0LcQfx7pKAYk0nKz5wn1oP5iqlhZuy6RXOFdhr7rDwow==",
       "type": "package",
       "path": "system.appcontext/4.1.0",
       "files": [
         ".nupkg.metadata",
-        "System.AppContext.4.1.0.nupkg.sha512",
-        "System.AppContext.nuspec",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2108,7 +2108,9 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.AppContext.dll"
+        "runtimes/aot/lib/netcore50/System.AppContext.dll",
+        "system.appcontext.4.1.0.nupkg.sha512",
+        "system.appcontext.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -2604,13 +2606,12 @@
       ]
     },
     "System.Diagnostics.Tools/4.0.1": {
-      "sha512": "BbyN5EeVur0cac7Igddv2oc6FgO7alWyUaOXRIzO80CynQetBTWt1obEY9UDPRTICT2oT0Zv9px34RO6A0bmtA==",
+      "sha512": "xBfJ8pnd4C17dWaC9FM6aShzbJcRNMChUMD42I6772KGGrqaFdumwhn9OdM68erj1ueNo3xdQ1EwiFjK5k8p0g==",
       "type": "package",
       "path": "system.diagnostics.tools/4.0.1",
       "files": [
         ".nupkg.metadata",
-        "System.Diagnostics.Tools.4.0.1.nupkg.sha512",
-        "System.Diagnostics.Tools.nuspec",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2656,7 +2657,9 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._"
+        "ref/xamarinwatchos10/_._",
+        "system.diagnostics.tools.4.0.1.nupkg.sha512",
+        "system.diagnostics.tools.nuspec"
       ]
     },
     "System.Diagnostics.TraceSource/4.3.0": {
@@ -4637,13 +4640,12 @@
       ]
     },
     "System.Xml.XDocument/4.0.11": {
-      "sha512": "ftGkBV9xBA++mKq82m62txbrsgAE7JQkwtKTHmg+26gEbdFYEnMo/BKlU/9ZcU5FiX9sOECUhDMThO1s0y7BJA==",
+      "sha512": "Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "type": "package",
       "path": "system.xml.xdocument/4.0.11",
       "files": [
         ".nupkg.metadata",
-        "System.Xml.XDocument.4.0.11.nupkg.sha512",
-        "System.Xml.XDocument.nuspec",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4702,7 +4704,9 @@
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._"
+        "ref/xamarinwatchos10/_._",
+        "system.xml.xdocument.4.0.11.nupkg.sha512",
+        "system.xml.xdocument.nuspec"
       ]
     },
     "System.Xml.XmlDocument/4.3.0": {
@@ -4849,20 +4853,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NPosokhova\\.nuget\\packages\\": {}
+    "C:\\Users\\Nata\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Nata\\source\\repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
       "projectName": "Cut_URL.Tests",
-      "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
-      "packagesPath": "C:\\Users\\NPosokhova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\cut_URL.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\cut_URL.Tests\\Cut_URL.Tests.csproj",
+      "packagesPath": "C:\\Users\\Nata\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\cut_URL.Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\NPosokhova\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Nata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -4873,15 +4882,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj"
+            "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.Business_Logic.Interfaces\\Cut_URL.Business_Logic.Interfaces.csproj"
             },
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj"
+            "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj": {
+              "projectPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.Business_Logic\\Cut_URL.Business_Logic.csproj"
             },
-            "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\NPosokhova\\Source\\Repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
+            "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Nata\\source\\repos\\cut_url\\Cut_URL.DataAccess.Interfaces\\Cut_URL.DataAccess.Interfaces.csproj"
             }
           }
         }
@@ -4894,6 +4904,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -4927,7 +4938,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
