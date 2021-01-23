@@ -58,5 +58,20 @@ namespace Cut_URL.Tests
             //Assert
             Assert.IsTrue(expectedUrlData.Equals(actualUrlData));
         }
+
+        [Test]
+        public void CheckShortUrlExistsShouldBeSuccess()
+        {
+            //Arrange
+            string userId = "1234";
+            string shortUrl = "cuturl.local/google";
+            string longUrl = "https://docs.google.com/";
+
+            //Actual
+            _repository.AddShortUrlData(userId, shortUrl, longUrl);
+
+            //Assert
+            Assert.IsTrue(_repository.IsShortUrlExists(shortUrl));
+        }
     }
 }
