@@ -16,7 +16,17 @@ namespace Cut_URL.Business_Logic
 
         public Guid RegisterUser(string login, string password)
         {
-            throw new NotImplementedException();
+            if(_repository.IsUserExistsInDatabase(login))
+            {
+                throw new UserManagementException("The Login already exists in database.");
+            }
+            //TODO Можно ещё проверить пароль на корректность.
+
+            Guid token = Guid.NewGuid();
+
+            _repository.AddUser(token, login, password);
+
+            return token;
         }
     }
 }

@@ -48,11 +48,6 @@ namespace CutUrlLogic.DataAccess
             }
         }
 
-        public void AddUser(Guid token, string login, string password)
-        {
-            throw new NotImplementedException();
-        }
-
         public ShortcutUrlData GetUrlDataByShortUrl(string shortUrl)
         {
             try
@@ -94,6 +89,15 @@ namespace CutUrlLogic.DataAccess
                 var sqlQuery = "UPDATE ShortcutUrlData SET Date = @Date, TransferQuantity = @TransferQuantity, ShortUrl = @ShortUrl, LongUrl = @LongUrl  WHERE Id = @Id";
                 db.Execute(sqlQuery, urlData);
             }    
+        }
+        public void AddUser(Guid token, string login, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsUserExistsInDatabase(string login)
+        {
+            throw new NotImplementedException();
         }
     }
 }
