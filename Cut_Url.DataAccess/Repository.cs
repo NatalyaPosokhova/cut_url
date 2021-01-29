@@ -48,6 +48,11 @@ namespace CutUrlLogic.DataAccess
             }
         }
 
+        public void AddUser(Guid token, string login, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public ShortcutUrlData GetUrlDataByShortUrl(string shortUrl)
         {
             try

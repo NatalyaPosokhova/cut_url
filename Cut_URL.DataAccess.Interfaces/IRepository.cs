@@ -10,5 +10,6 @@ namespace Cut_URL.DataAccess
         public void AddShortUrlData(string userId, string shortUrl, string longUrl);
         public bool IsShortUrlExists(string shortUrl);
         void SaveUrlData(ShortcutUrlData urlData);
+        void AddUser(Guid token, string login, string password);
     }
 }
