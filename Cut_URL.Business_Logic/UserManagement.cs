@@ -18,7 +18,7 @@ namespace Cut_URL.Business_Logic
         {
             if(_repository.IsUserExistsInDatabase(login))
             {
-                throw new UserManagementException("The Login already exists in database.");
+                throw new UserManageException("The Login already exists in database.");
             }
             //TODO Можно ещё проверить пароль на корректность.
 
