@@ -99,5 +99,10 @@ namespace CutUrlLogic.DataAccess
         {
             throw new NotImplementedException();
         }
+
+        public bool IsLoginExistsInDatabase(string login)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
