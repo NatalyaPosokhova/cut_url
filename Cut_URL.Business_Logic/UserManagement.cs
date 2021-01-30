@@ -24,7 +24,14 @@ namespace Cut_URL.Business_Logic
 
             Guid token = Guid.NewGuid();
 
-            _repository.AddUser(token, login, password);
+            try
+            {
+                _repository.AddUser(token, login, password);
+            }
+            catch(DataAccessException ex)
+            {
+                throw new UserManageException(ex.Message, ex);
+            }
 
             return token;
         }

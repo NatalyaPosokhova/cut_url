@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
 using NSubstitute;
 using Cut_URL.Business_Logic;
@@ -43,7 +41,7 @@ namespace Cut_URL.Tests
         [Test]
         public void TryToCreateUserErrorInDbShouldBeError()
         {
-            Guid token = bl.RegisterUser(login, password);
+            Guid token = Guid.NewGuid();
 
             _repository.When(x => x.AddUser(token, login, password)).Do(x => { throw new DataAccessException("Cannot add User to database."); });
 
