@@ -39,5 +39,15 @@ namespace Cut_URL.Tests
 
             Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
         }
+
+        [Test]
+        public void TryToCreateUserErrorInDbShouldBeError()
+        {
+            Guid token = bl.RegisterUser(login, password);
+
+            _repository.When(x => x.AddUser(token, login, password)).Do(x => { throw new DataAccessException("Cannot add User to database."); });
+
+            Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
+        }
     }
 }
