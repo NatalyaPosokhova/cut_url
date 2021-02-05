@@ -16,7 +16,8 @@ namespace Cut_URL.Business_Logic
 
         public Guid RegisterUser(string login, string password)
         {
-            if(_repository.IsUserExistsInDatabase(login))
+            var dbg = _repository.IsUserExistsInDatabase(login);
+            if (_repository.IsUserExistsInDatabase(login))
             {
                 throw new UserManageException("The Login already exists in database.");
             }

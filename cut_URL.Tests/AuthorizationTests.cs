@@ -10,8 +10,8 @@ namespace Cut_URL.Tests
     {
         private IRepository _repository;
         private IUserManagement bl;
-        private string login = "login";
-        private string password = "password";
+        private const string login = "login";
+        private const string password = "password";
 
         [SetUp]
         public void Setup()
@@ -31,9 +31,7 @@ namespace Cut_URL.Tests
         [Test]
         public void TryToCreateAlreadyExistedUserShouldBeError()
         {
-            Guid token = bl.RegisterUser(login, password);
-
-            _repository.IsLoginExistsInDatabase(login).Returns(true);
+            _repository.IsUserExistsInDatabase(login).Returns(true);
 
             Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
         }
@@ -41,9 +39,10 @@ namespace Cut_URL.Tests
         [Test]
         public void TryToCreateUserErrorInDbShouldBeError()
         {
-            Guid token = Guid.NewGuid();
-
-            _repository.When(x => x.AddUser(token, login, password)).Do(x => { throw new DataAccessException("Cannot add User to database."); });
+            _repository.When(x => x.AddUser(Arg.Any<Guid>(), login, password)).Do(x => 
+            { 
+                throw new DataAccessException("Cannot add User to database."); 
+            });
 
             Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
         }
