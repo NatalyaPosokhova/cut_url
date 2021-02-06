@@ -31,7 +31,8 @@ namespace Cut_URL.Tests
         [Test]
         public void TryToCreateAlreadyExistedUserShouldBeError()
         {
-            _repository.IsUserExistsInDatabase(login).Returns(true);
+            Guid id = Guid.NewGuid();
+            _repository.GetUserByLogin(login).Returns(new User { Login = login, Password = password, UserId = id});
 
             Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
         }

@@ -95,11 +95,6 @@ namespace CutUrlLogic.DataAccess
             throw new NotImplementedException();
         }
 
-        public bool IsUserExistsInDatabase(string login)
-        {
-            throw new NotImplementedException();
-        }
-
         public object GetUserByLogin(string login)
         {
             throw new NotImplementedException();

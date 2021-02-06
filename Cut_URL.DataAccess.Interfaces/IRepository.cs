@@ -11,7 +11,6 @@ namespace Cut_URL.DataAccess
         public bool IsShortUrlExists(string shortUrl);
         void SaveUrlData(ShortcutUrlData urlData);
         void AddUser(Guid token, string login, string password);
-        bool IsUserExistsInDatabase(string login);
         object GetUserByLogin(string login);
     }
 }
