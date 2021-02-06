@@ -14,6 +14,11 @@ namespace Cut_URL.Business_Logic
             _repository = repository;
         }
 
+        public Guid LoginUser(string login, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public Guid RegisterUser(string login, string password)
         {
             var dbg = _repository.IsUserExistsInDatabase(login);

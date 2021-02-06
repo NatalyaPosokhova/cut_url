@@ -46,5 +46,34 @@ namespace Cut_URL.Tests
 
             Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
         }
+
+        [Test]
+        public void TryToLoginUserShouldBeSuccess()
+        {
+            Guid id = Guid.NewGuid();
+            _repository.GetUserByLogin(login).Returns(new User { Login = login, Password = password, UserId = id });
+          
+            Guid actToken = bl.LoginUser(login, password);
+
+            Assert.AreEqual(id, actToken);
+        }
+
+        [Test]
+        public void TryToLoginUnexistedUserShouldBeError()
+        {
+            _repository.GetUserByLogin(login).Returns(null);
+
+            Assert.Throws<UnableToLoginUserException>(() => bl.LoginUser(login, password));
+        }
+
+        [Test]
+        public void TryToLoginWithIncorrectPasswordShouldBeError()
+        {
+            Guid id = Guid.NewGuid();
+            string incorrectPassw = "incorrectPassword";
+            _repository.GetUserByLogin(login).Returns(new User { Login = login, Password = password, UserId = id });
+
+            Assert.Throws<IncorrectPasswordException>(() => bl.LoginUser(login, incorrectPassw));
+        }
     }
 }
