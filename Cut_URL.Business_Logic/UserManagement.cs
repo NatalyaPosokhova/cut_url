@@ -16,7 +16,8 @@ namespace Cut_URL.Business_Logic
 
         public Guid LoginUser(string login, string password)
         {
-            throw new NotImplementedException();
+            User user = _repository.GetUserByLogin(login) as User;
+            return user.UserId;
         }
 
         public Guid RegisterUser(string login, string password)
