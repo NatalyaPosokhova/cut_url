@@ -16,7 +16,24 @@ namespace Cut_URL.Business_Logic
 
         public Guid LoginUser(string login, string password)
         {
-            User user = _repository.GetUserByLogin(login) as User;
+            User user;
+            try
+            {
+                user = _repository.GetUserByLogin(login) as User;
+                if(user == null)
+                {
+                    throw new UnableToLoginUserException($"The User with {login} doesn't exist.");
+                }
+                if(user.Password != password)
+                {
+                    throw new IncorrectPasswordException("The password is wrong.");
+                }
+            }
+            catch(DataAccessException ex)
+            {
+                throw new UserManageException(ex.Message);
+            }
+             
             return user.UserId;
         }
 
