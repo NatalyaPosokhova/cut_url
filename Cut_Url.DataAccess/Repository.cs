@@ -99,5 +99,10 @@ namespace CutUrlLogic.DataAccess
         {
             throw new NotImplementedException();
         }
+
+        public Session GetSessionByGuid(Guid guid)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

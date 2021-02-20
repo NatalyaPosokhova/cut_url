@@ -23,7 +23,7 @@ namespace Cut_URL.Tests
         [Test] 
         public void TryToCreateUserShouldBeSuccess()
         {
-            Guid token = bl.RegisterUser(login, password);
+            Guid token = bl.RegisterNewUser(login, password);
 
             _repository.Received().AddUser(token, login, password);
         }
@@ -34,7 +34,7 @@ namespace Cut_URL.Tests
             Guid id = Guid.NewGuid();
             _repository.GetUserByLogin(login).Returns(new User { Login = login, Password = password, UserId = id});
 
-            Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
+            Assert.Throws<UserManageException>(() => bl.RegisterNewUser(login, password));
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace Cut_URL.Tests
                 throw new DataAccessException("Cannot add User to database."); 
             });
 
-            Assert.Throws<UserManageException>(() => bl.RegisterUser(login, password));
+            Assert.Throws<UserManageException>(() => bl.RegisterNewUser(login, password));
         }
 
         [Test]

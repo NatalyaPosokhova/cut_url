@@ -37,7 +37,12 @@ namespace Cut_URL.Business_Logic
             return user.UserId;
         }
 
-        public Guid RegisterUser(string login, string password)
+        public bool IsSessionActive(Guid guid)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Guid RegisterNewUser(string login, string password)
         {
             if (_repository.GetUserByLogin(login) != null)
             {
