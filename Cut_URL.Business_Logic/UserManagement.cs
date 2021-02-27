@@ -1,8 +1,10 @@
 ﻿using Cut_URL.DataAccess;
+using System.Runtime.CompilerServices;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
+[assembly: InternalsVisibleTo("Cut_URL.Tests")]
 namespace Cut_URL.Business_Logic
 {
     public class UserManagement : IUserManagement
@@ -15,8 +17,7 @@ namespace Cut_URL.Business_Logic
             _repository = repository;
             _currentTime = DateTime.Now;
         }
-
-        public UserManagement(IRepository repository, DateTime testTime) //TODO: сделать internal
+        internal UserManagement(IRepository repository, DateTime testTime) //TODO: сделать internal
         {
             _repository = repository;
             _currentTime = testTime;
