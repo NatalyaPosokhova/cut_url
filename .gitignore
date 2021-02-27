@@ -3,3 +3,5 @@ bin
 obj
 .vs
 Debug
+/cut_URL.Tests/bin
+/cut_URL.Tests/obj
