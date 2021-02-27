@@ -14,7 +14,7 @@ namespace Cut_URL.Tests
         public void SessionAliveShouldBeTrue()
         {
             //Arrange
-            UserManagement userManager = new UserManagement(repository);
+            UserManagement userManager = new UserManagement(repository, DateTime.Today.AddMinutes(20));
             Guid guid = Guid.NewGuid();
             Session session = new Session { Id = guid, LastAccessTime = DateTime.Today };
             repository.GetSessionByGuid(guid).Returns(session);
@@ -30,7 +30,7 @@ namespace Cut_URL.Tests
         public void TimeIsOutSessionShouldBeFalse()
         {
             //Arrange
-            UserManagement userManager = new UserManagement(repository);
+            UserManagement userManager = new UserManagement(repository, DateTime.Today);
             Guid guid = Guid.NewGuid();
             Session session = new Session { Id = guid, LastAccessTime = DateTime.Today.AddDays(-1) };
             repository.GetSessionByGuid(guid).Returns(session);
@@ -46,7 +46,7 @@ namespace Cut_URL.Tests
         public void SessionIsAbsentShouldBeFalse()
         {
             //Arrange
-            UserManagement userManager = new UserManagement(repository);
+            UserManagement userManager = new UserManagement(repository, DateTime.Today);
             Guid guid = Guid.NewGuid();
             repository.When(x => x.GetSessionByGuid(guid)).Do(x =>
             {
@@ -56,7 +56,7 @@ namespace Cut_URL.Tests
 
             //Act
             //Assert
-            Assert.Throws<SessionIsNotExistedException>(() => userManager.IsSessionActive(guid));
+            Assert.Throws<UserManageException>(() => userManager.IsSessionActive(guid));
         }
     }
 }

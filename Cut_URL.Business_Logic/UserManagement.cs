@@ -8,10 +8,18 @@ namespace Cut_URL.Business_Logic
     public class UserManagement : IUserManagement
     {
         private IRepository _repository;
+        private DateTime _currentTime;
 
         public UserManagement(IRepository repository)
         {
             _repository = repository;
+            _currentTime = DateTime.Now;
+        }
+
+        public UserManagement(IRepository repository, DateTime testTime) //TODO: сделать internal
+        {
+            _repository = repository;
+            _currentTime = testTime;
         }
 
         public Guid LoginUser(string login, string password)
@@ -39,7 +47,19 @@ namespace Cut_URL.Business_Logic
 
         public bool IsSessionActive(Guid guid)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Session session = _repository.GetSessionByGuid(guid);
+                if(session.Id == guid && session.LastAccessTime > _currentTime.AddMinutes(-30) && session.LastAccessTime < _currentTime)
+                {
+                    return true;
+                }
+            }
+            catch(SessionIsNotExistedException ex)
+            {
+                throw new UserManageException(ex.Message, ex);
+            }
+            return false;
         }
 
         public Guid RegisterNewUser(string login, string password)
