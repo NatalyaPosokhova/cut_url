@@ -1,5 +1,7 @@
 using Autofac;
 using Cut_URL.Business_Logic;
+using Cut_URL.DataAccess;
+using CutUrlLogic.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,12 +25,10 @@ namespace Cut_URL
         {
             services.AddControllers();
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:Default"]));
-            //services.AddTransient<IUserManagement, UserManagement>();
-
-            var builder = new ContainerBuilder();
-            builder.RegisterType<UserManagement>().As<IUserManagement>();
-            builder.RegisterType<Cut_URL.Business_Logic.CutUrlLogic>().As<ICutUrlLogic>();
-            var container = builder.Build();
+            services.AddTransient<IUserManagement, UserManagement>();
+            services.AddTransient<IRepository, Repository>();
+            services.AddTransient<IShortUrlGenerator, ShortUrlGenerator>();
+            services.AddTransient<ICutUrlLogic, Cut_URL.Business_Logic.CutUrlLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

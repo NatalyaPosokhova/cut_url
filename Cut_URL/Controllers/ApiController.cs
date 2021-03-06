@@ -5,7 +5,7 @@ using System.Net.Http;
 
 namespace Cut_URL.Controllers
 {
-    [Route("[controller]")]
+    [Route("/api/{action}")]
     public class ApiController : Controller
     {
         private IUserManagement _userManagement;
@@ -29,7 +29,7 @@ namespace Cut_URL.Controllers
         /// 200 - Ok.
         /// 409 - User Already Existed. 
         /// 500 - Database error.</returns>
-        [HttpPost]
+        [HttpGet]
         public JsonResult NewUser(string login, string password)
         {
             var token = _userManagement.RegisterNewUser(login, password);
