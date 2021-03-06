@@ -31,12 +31,32 @@ namespace Cut_URL.Controllers
         {
             var token = _userManagement.RegisterNewUser(login, password);
 
-            var response = new HttpResponseMessage();
+            HttpResponseMessage response = new HttpResponseMessage();
             response.Headers.Location = new Uri(token.ToString());
 
             return response;
         }
 
+        /// <summary>
+        /// Post function for Login user.
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="password"></param>
+        /// <returns>Response with Token in location header.
+        /// 200 - Ok.
+        /// 404 - User is not found or incorrect password.
+        /// 423 - User is blocked.
+        /// 500 - Database error.
+        /// </returns>
+        [HttpPost]
+        public HttpResponseMessage LoginUser(string login, string password)
+        {
+            var token = _userManagement.LoginUser(login, password);
 
+            HttpResponseMessage response = new HttpResponseMessage();
+            response.Headers.Location = new Uri(token.ToString());
+
+            return response;
+        }
     }
 }
