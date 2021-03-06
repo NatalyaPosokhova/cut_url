@@ -69,7 +69,6 @@ namespace Cut_URL.Business_Logic
             {
                 throw new UserManageException("The Login already exists in database.");
             }
-            //TODO Можно ещё проверить пароль на корректность.
 
             Guid token = Guid.NewGuid();
 

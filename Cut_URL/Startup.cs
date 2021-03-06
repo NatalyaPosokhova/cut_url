@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
+using Cut_URL.Business_Logic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +29,13 @@ namespace Cut_URL
         {
             services.AddControllers();
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:Default"]));
+            //services.AddTransient<IUserManagement, UserManagement>();
+
+            var builder = new ContainerBuilder();
+            builder.RegisterType<UserManagement>().As<IUserManagement>();
+
+
+            var container = builder.Build();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
