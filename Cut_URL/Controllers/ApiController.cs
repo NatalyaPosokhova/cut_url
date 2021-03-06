@@ -8,9 +8,11 @@ namespace Cut_URL.Controllers
     public class ApiController : Controller
     {
         private IUserManagement _userManagement;
-        public ApiController(IUserManagement userManagement)
+        private ICutUrlLogic _cutUrlLogic;
+        public ApiController(IUserManagement userManagement, ICutUrlLogic cutUrlLogic)
         {
             _userManagement = userManagement;
+            _cutUrlLogic = cutUrlLogic;
         }
         public IActionResult Index()
         {
@@ -27,14 +29,14 @@ namespace Cut_URL.Controllers
         /// 409 - User Already Existed. 
         /// 500 - Database error.</returns>
         [HttpPost]
-        public HttpResponseMessage NewUser(string login, string password)
+        public JsonResult NewUser(string login, string password)
         {
             var token = _userManagement.RegisterNewUser(login, password);
 
             HttpResponseMessage response = new HttpResponseMessage();
             response.Headers.Location = new Uri(token.ToString());
 
-            return response;
+            return Json("");
         }
 
         /// <summary>
@@ -49,14 +51,34 @@ namespace Cut_URL.Controllers
         /// 500 - Database error.
         /// </returns>
         [HttpPost]
-        public HttpResponseMessage LoginUser(string login, string password)
+        public JsonResult LoginUser(string login, string password)
         {
-            var token = _userManagement.LoginUser(login, password);
+            Guid token = _userManagement.LoginUser(login, password);
 
             HttpResponseMessage response = new HttpResponseMessage();
             response.Headers.Location = new Uri(token.ToString());
 
-            return response;
+            return Json("");
+        }
+
+        /// <summary>
+        /// Creates short url from long.
+        /// </summary>
+        /// <param name="token"></param>
+        /// <param name="longUrl"></param>
+        /// <returns>Short url with Token in location header.
+        /// 200 - Ok.
+        /// 401 - Unauthorized user.
+        /// 500 - Database error.
+        /// </returns>
+        public JsonResult CreateShortcutUrl(string token, string longUrl)
+        {
+            string shortUrl = _cutUrlLogic.CreateShortUrlFromLong(longUrl, token);
+
+            HttpResponseMessage response = new HttpResponseMessage();
+            response.Headers.Location = new Uri(token.ToString());
+
+            return Json(shortUrl);
         }
     }
 }

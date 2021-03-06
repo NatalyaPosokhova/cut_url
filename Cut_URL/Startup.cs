@@ -1,16 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Autofac;
 using Cut_URL.Business_Logic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using MySqlConnector;
 
 namespace Cut_URL
@@ -33,8 +27,7 @@ namespace Cut_URL
 
             var builder = new ContainerBuilder();
             builder.RegisterType<UserManagement>().As<IUserManagement>();
-
-
+            builder.RegisterType<Cut_URL.Business_Logic.CutUrlLogic>().As<ICutUrlLogic>();
             var container = builder.Build();
         }
 
