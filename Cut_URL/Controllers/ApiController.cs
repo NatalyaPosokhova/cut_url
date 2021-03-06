@@ -5,10 +5,10 @@ using System.Net.Http;
 
 namespace Cut_URL.Controllers
 {
-    public class HomeController : Controller
+    public class ApiController : Controller
     {
         private IUserManagement _userManagement;
-        public HomeController(IUserManagement userManagement)
+        public ApiController(IUserManagement userManagement)
         {
             _userManagement = userManagement;
         }
@@ -36,5 +36,7 @@ namespace Cut_URL.Controllers
 
             return response;
         }
+
+
     }
 }
