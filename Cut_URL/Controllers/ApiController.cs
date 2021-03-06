@@ -5,6 +5,7 @@ using System.Net.Http;
 
 namespace Cut_URL.Controllers
 {
+    [Route("[controller]")]
     public class ApiController : Controller
     {
         private IUserManagement _userManagement;
@@ -34,9 +35,9 @@ namespace Cut_URL.Controllers
             var token = _userManagement.RegisterNewUser(login, password);
 
             HttpResponseMessage response = new HttpResponseMessage();
-            response.Headers.Location = new Uri(token.ToString());
+            //response.Headers.Location = new Uri(token.ToString());
 
-            return Json("");
+            return Json(new {token = token });
         }
 
         /// <summary>
@@ -71,6 +72,7 @@ namespace Cut_URL.Controllers
         /// 401 - Unauthorized user.
         /// 500 - Database error.
         /// </returns>
+        [HttpPost]
         public JsonResult CreateShortcutUrl(string token, string longUrl)
         {
             string shortUrl = _cutUrlLogic.CreateShortUrlFromLong(longUrl, token);
@@ -80,5 +82,28 @@ namespace Cut_URL.Controllers
 
             return Json(shortUrl);
         }
+
+        /// <summary>
+        /// Gets all user data on urls.
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns>Returns all user urls, hits, date creation.</returns>
+        [HttpPost]
+        public JsonResult GetAllUrlsByUser(string token)
+        {
+            throw new NotImplementedException();
+        }
+
+        //[HttpGet("{shortUrl}")]
+        //public JsonResult GetUrlTransition(string token)
+        //{
+
+        //}
+
+        //[HttpPost]
+        //public JsonResult PostUrlTransition(string token)
+        //{
+
+        //}
     }
 }
