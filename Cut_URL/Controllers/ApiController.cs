@@ -1,4 +1,5 @@
 ﻿using Cut_URL.Business_Logic;
+using Cut_URL.Data;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http;
@@ -29,10 +30,11 @@ namespace Cut_URL.Controllers
         /// 200 - Ok.
         /// 409 - User Already Existed. 
         /// 500 - Database error.</returns>
-        [HttpGet]
-        public JsonResult NewUser(string login, string password)
+        [HttpPost]
+       
+        public JsonResult NewUser([FromBody]UserData user)
         {
-            var token = _userManagement.RegisterNewUser(login, password);
+            var token = _userManagement.RegisterNewUser(user.login, user.password);
 
             HttpResponseMessage response = new HttpResponseMessage();
             //response.Headers.Location = new Uri(token.ToString());
