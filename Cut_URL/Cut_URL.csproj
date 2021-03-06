@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Cut_URL.Bootstrap\Cut_URL.Bootstrap.csproj" />
     <ProjectReference Include="..\Cut_URL.Business_Logic.Interfaces\Cut_URL.Business_Logic.Interfaces.csproj" />
   </ItemGroup>
