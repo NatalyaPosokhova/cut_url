@@ -15,4 +15,3 @@ C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\n
 C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.dll
 C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.pdb
-C:\Users\Nata\source\repos\cut_url\Cut_URL.Business_Logic.Interfaces\obj\Debug\netcoreapp3.1\Cut_URL.Business_Logic.Interfaces.csprojAssemblyReference.cache

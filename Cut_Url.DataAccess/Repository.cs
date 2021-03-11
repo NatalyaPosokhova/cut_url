@@ -95,14 +95,26 @@ namespace CutUrlLogic.DataAccess
             throw new NotImplementedException();
         }
 
-        public object GetUserByLogin(string login)
+        public User GetUserByLogin(string login)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new MySqlConnection(_connectionString))
+            {
+                String sql = "SELECT UserId, Password, Login FROM User WHERE Login = @login";
+                User user = db.Query<User>(sql, new { login}).FirstOrDefault();
+              
+                return user;
+            }
         }
 
         public Session GetSessionByGuid(Guid guid)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new MySqlConnection(_connectionString))
+            {
+                String sql = "SELECT Id, LastAccessTime FROM Session WHERE Id = @guid";
+                Session session = db.Query<Session>(sql, new { guid }).FirstOrDefault();
+
+                return session;
+            }
         }
     }
 }
