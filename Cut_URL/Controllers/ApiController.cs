@@ -16,9 +16,10 @@ namespace Cut_URL.Controllers
             _userManagement = userManagement;
             _cutUrlLogic = cutUrlLogic;
         }
-        public IActionResult Index()
+        [HttpGet]
+        public string Index()
         {
-            return View();
+            return "Hello";
         }
 
         /// <summary>

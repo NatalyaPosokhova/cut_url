@@ -14,7 +14,7 @@ namespace Cut_URL.Business_Logic
 
         public UserManagement(IRepository repository)
         {
-            _repository = repository;
+            _repository = repository;            
             _currentTime = DateTime.Now;
         }
         internal UserManagement(IRepository repository, DateTime testTime) //TODO: сделать internal

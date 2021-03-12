@@ -23,7 +23,7 @@ namespace Cut_URL
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:Default"]));
+            //services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:Default"]));
             services.AddTransient<IUserManagement, UserManagement>();
             services.AddTransient<IRepository, Repository>();
             services.AddTransient<IShortUrlGenerator, ShortUrlGenerator>();
