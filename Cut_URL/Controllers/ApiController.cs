@@ -33,14 +33,21 @@ namespace Cut_URL.Controllers
         /// 500 - Database error.</returns>
         [HttpPost]
        
-        public JsonResult NewUser([FromBody]UserData user)
+        public IActionResult NewUser([FromBody]UserData user)
         {
-            var token = _userManagement.RegisterNewUser(user.login, user.password);
-
-            HttpResponseMessage response = new HttpResponseMessage();
-            //response.Headers.Location = new Uri(token.ToString());
-
-            return Json(new {token = token });
+            try
+            {
+                var token = _userManagement.RegisterNewUser(user.login, user.password);
+                return Json(new { token = token });
+            }
+            catch (UnableRegisterUserException ex)
+            {
+                return StatusCode(409, Json(ex));
+            }
+            catch (UserManageException ex)
+            {
+                return StatusCode(500, Json(ex));
+            }
         }
 
         /// <summary>
@@ -51,18 +58,29 @@ namespace Cut_URL.Controllers
         /// <returns>Response with Token in location header.
         /// 200 - Ok.
         /// 404 - User is not found or incorrect password.
-        /// 423 - User is blocked.
+        /// 423 - User is blocked.TODO
         /// 500 - Database error.
         /// </returns>
         [HttpPost]
-        public JsonResult LoginUser(string login, string password)
+        public IActionResult LoginUser([FromBody] UserData user)
         {
-            Guid token = _userManagement.LoginUser(login, password);
-
-            HttpResponseMessage response = new HttpResponseMessage();
-            response.Headers.Location = new Uri(token.ToString());
-
-            return Json("");
+            try
+            {
+                Guid token = _userManagement.LoginUser(user.login, user.password);
+                return Json(new { token = token });
+            }
+            catch(UnableToLoginUserException ex)
+            {
+                return StatusCode(404, Json(ex)); 
+            }
+            catch (IncorrectPasswordException ex)
+            {
+                return StatusCode(404, Json(ex));
+            }
+            catch (UserManageException ex)
+            {
+                return StatusCode(500, Json(ex));
+            }
         }
 
         /// <summary>

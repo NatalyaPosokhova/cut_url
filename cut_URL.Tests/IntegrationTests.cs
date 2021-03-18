@@ -23,7 +23,8 @@ namespace Cut_URL.Tests
         [SetUp]
         public void SetUp()
         {
-            _repository = new Repository(connectionString);
+            //_repository = new Repository(connectionString);
+            _repository = new Repository();
             _generator = Substitute.For<ShortUrlGenerator>();
             _logic = new Business_Logic.CutUrlLogic(_repository, _generator);
         }

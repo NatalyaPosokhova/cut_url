@@ -67,7 +67,7 @@ namespace Cut_URL.Business_Logic
         {
             if (_repository.GetUserByLogin(login) != null)
             {
-                throw new UserManageException("The Login already exists in database.");
+                throw new UnableRegisterUserException("The Login already exists in database.");
             }
 
             Guid token = Guid.NewGuid();
