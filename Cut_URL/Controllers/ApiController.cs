@@ -1,7 +1,10 @@
 ﻿using Cut_URL.Business_Logic;
 using Cut_URL.Data;
+using Cut_URL.DataAccess;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 
 namespace Cut_URL.Controllers
@@ -94,14 +97,17 @@ namespace Cut_URL.Controllers
         /// 500 - Database error.
         /// </returns>
         [HttpPost]
-        public JsonResult CreateShortcutUrl(string token, string longUrl)
+        public IActionResult CreateShortcutUrl([FromBody] ShortcutUrlData data)
         {
-            string shortUrl = _cutUrlLogic.CreateShortUrlFromLong(longUrl, token);
-
-            HttpResponseMessage response = new HttpResponseMessage();
-            response.Headers.Location = new Uri(token.ToString());
-
-            return Json(shortUrl);
+            try
+            {
+                string shortUrl = _cutUrlLogic.CreateShortUrlFromLong(data.LongUrl, data.UserId);
+                return Json(shortUrl);
+            }
+            catch (CreateShortUrlException ex)
+            {
+                return StatusCode(500, Json(ex));
+            }
         }
 
         /// <summary>
@@ -109,10 +115,22 @@ namespace Cut_URL.Controllers
         /// </summary>
         /// <param name="token"></param>
         /// <returns>Returns all user urls, hits, date creation.</returns>
+        /// 200 - Ok.
+        /// 401 - Unauthorized user.
+        /// 500 - Database error.
         [HttpPost]
-        public JsonResult GetAllUrlsByUser(string token)
+        public IActionResult GetAllUrlsByUser(string token)
         {
-            throw new NotImplementedException();
+            try
+            {
+                IEnumerable<ShortcutUrlData> allUserUrls = _cutUrlLogic.GetAllUserInformation(token);
+                var convertedJson = JsonConvert.SerializeObject(allUserUrls, Formatting.Indented);
+                return Json(allUserUrls);
+            }
+            catch (CreateShortUrlException ex)
+            {
+                return StatusCode(500, Json(ex));
+            }
         }
 
         //[HttpGet("{shortUrl}")]

@@ -13,5 +13,6 @@ namespace Cut_URL.DataAccess
         void AddUser(Guid token, string login, string password);
         User GetUserByLogin(string login);
         Session GetSessionByGuid(Guid guid);
+        IEnumerable<ShortcutUrlData> GetAllUserUrlData(string userId);
     }
 }

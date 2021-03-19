@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cut_URL.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,5 +9,6 @@ namespace Cut_URL.Business_Logic
     {
         string CreateShortUrlFromLong(string longUrl, string userId);
         string GetLongUrlFromShort(string shortUrl, string userId);
+        IEnumerable<ShortcutUrlData> GetAllUserInformation(string userId);
     }
 }

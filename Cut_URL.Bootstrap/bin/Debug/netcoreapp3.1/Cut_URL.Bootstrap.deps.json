@@ -193,6 +193,9 @@
         }
       },
       "Cut_URL.Business_Logic.Interfaces/1.0.0": {
+        "dependencies": {
+          "Cut_URL.DataAccess.Interfaces": "1.0.0"
+        },
         "runtime": {
           "Cut_URL.Business_Logic.Interfaces.dll": {}
         }

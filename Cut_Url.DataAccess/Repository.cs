@@ -141,5 +141,19 @@ namespace CutUrlLogic.DataAccess
             }
         }
 
+        public IEnumerable<ShortcutUrlData> GetAllUserUrlData(string userId)
+        {
+            try
+            {
+                using (IDbConnection db = new MySqlConnection(_connectionString))
+                {
+                    return db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData WHERE VserId = @userId", new { userId });
+                }
+            }
+            catch (DataAccessException)
+            {
+                throw new DataAccessException("Error occured during get data from database.");
+            }
+        }
     }
 }
