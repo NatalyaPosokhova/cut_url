@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace Cut_URL.Data
 {
-    public class UserData
+    public class UserId
     {
-        public string login { get; set; }
-        public string password { get; set; }
-
         public string token { get; set; }
     }
 }

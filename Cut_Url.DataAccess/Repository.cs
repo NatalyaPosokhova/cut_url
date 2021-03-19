@@ -147,7 +147,7 @@ namespace CutUrlLogic.DataAccess
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    return db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData WHERE VserId = @userId", new { userId });
+                    return db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData WHERE UserId = @userId", new { userId });
                 }
             }
             catch (DataAccessException)

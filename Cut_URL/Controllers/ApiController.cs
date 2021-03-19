@@ -45,7 +45,7 @@ namespace Cut_URL.Controllers
             }
             catch (UnableRegisterUserException ex)
             {
-                return StatusCode(409, Json(ex));
+                return StatusCode(409, Json(new { error = ex.Message }));
             }
             catch (UserManageException ex)
             {
@@ -119,11 +119,11 @@ namespace Cut_URL.Controllers
         /// 401 - Unauthorized user.
         /// 500 - Database error.
         [HttpPost]
-        public IActionResult GetAllUrlsByUser(string token)
+        public IActionResult GetAllUrlsByUser([FromBody] UserData data)
         {
             try
             {
-                IEnumerable<ShortcutUrlData> allUserUrls = _cutUrlLogic.GetAllUserInformation(token);
+                IEnumerable<ShortcutUrlData> allUserUrls = _cutUrlLogic.GetAllUserInformation(data.token);
                 var convertedJson = JsonConvert.SerializeObject(allUserUrls, Formatting.Indented);
                 return Json(allUserUrls);
             }
