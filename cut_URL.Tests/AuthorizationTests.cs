@@ -62,7 +62,7 @@ namespace Cut_URL.Tests
         [Test]
         public void TryToLoginUnexistedUserShouldBeError()
         {
-            _repository.GetUserByLogin(login).Returns(null);
+            _repository.GetUserByLogin(login: login).Returns(null as User);
 
             Assert.Throws<UnableToLoginUserException>(() => bl.LoginUser(login, password));
         }

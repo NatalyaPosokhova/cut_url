@@ -195,6 +195,9 @@
       "Cut_URL.Business_Logic.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Cut_URL.DataAccess.Interfaces": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Cut_URL.Business_Logic.Interfaces.dll": {}
         },

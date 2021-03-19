@@ -14,7 +14,7 @@ namespace Cut_URL.Business_Logic
 
         public UserManagement(IRepository repository)
         {
-            _repository = repository;
+            _repository = repository;            
             _currentTime = DateTime.Now;
         }
         internal UserManagement(IRepository repository, DateTime testTime) //TODO: сделать internal
@@ -67,9 +67,8 @@ namespace Cut_URL.Business_Logic
         {
             if (_repository.GetUserByLogin(login) != null)
             {
-                throw new UserManageException("The Login already exists in database.");
+                throw new UnableRegisterUserException("The Login already exists in database.");
             }
-            //TODO Можно ещё проверить пароль на корректность.
 
             Guid token = Guid.NewGuid();
 

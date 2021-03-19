@@ -23,7 +23,6 @@ namespace Cut_URL.Business_Logic
                 do
                 {
                     shortUrl = _urlGenerator.GetShortUrl(longUrl);
-                    var test = _repository.IsShortUrlExists(shortUrl);
 
                 } while (_repository.IsShortUrlExists(shortUrl));
 
@@ -34,6 +33,19 @@ namespace Cut_URL.Business_Logic
             catch (DataAccessException ex)
             {
                 throw new CreateShortUrlException(ex.Message, ex);
+            }
+        }
+
+        public IEnumerable<ShortcutUrlData> GetAllUserInformation(string userId)
+        {
+            try
+            {
+                IEnumerable<ShortcutUrlData> userData= _repository.GetAllUserUrlData(userId);
+                return userData;
+            }
+            catch (DataAccessException ex)
+            {
+                throw new GetAllUserDataException(ex.Message, ex);
             }
         }
 
