@@ -69,8 +69,8 @@ namespace CutUrlLogic.DataAccess
             {
                 using (IDbConnection db = new MySqlConnection(_connectionString))
                 {
-                    var urlData = db.Query<ShortcutUrlData>("SELECT COUNT(1) FROM ShortcutUrlData where ShortUrl=@shortUrl", new { shortUrl });
-                    if (urlData != null)
+                    var urlData = db.Query<ShortcutUrlData>("SELECT * FROM ShortcutUrlData where ShortUrl=@shortUrl", new { shortUrl });
+                    if (urlData.Any())
                     {
                         return true;
                     }
